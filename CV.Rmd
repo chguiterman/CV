@@ -115,7 +115,7 @@ detailed_entries(edu %>%
 jobs %>% 
   select(-why) %>% 
   arrange(desc(End)) %>% 
-  filter(where != "Joseph, OR") %>% 
+  # filter(where != "Joseph, OR") %>% 
   detailed_entries(
     what = what,
     when = When,
@@ -222,7 +222,7 @@ courses %>%
 <!-- ``` -->
 
 
-# Presentations 
+# Presentations (last five years)
 
 ## Research Talks
 

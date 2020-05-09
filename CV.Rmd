@@ -80,6 +80,16 @@ courses <- read.csv(here("data", "teaching.csv")) %>%
 <!--   arrange(desc(date)) -->
 <!-- ``` -->
 
+```{r grants}
+grants_in <- read_csv(here("data", "grants.csv"))
+grants <- grants_in %>% 
+  mutate(date = case_when(
+    is.na(start_year) ~ glue("{end_year}"),
+    TRUE ~ glue("{start_year}--{end_year}")
+  )) %>% 
+  arrange(desc(end_year))
+```
+
 ```{r edu, include=FALSE}
 edu.raw <- read_csv(here("data", "education.csv"))
 edu <-
@@ -156,18 +166,25 @@ courses %>%
   )
 ```
 
-# Grants
+# Grants & Fellowships
 
-<!-- ```{r} -->
-<!-- awards %>% -->
-<!--   filter(tag == "grant") %>% -->
-<!--   detailed_entries(what = award, when = glue("{month(date, label = TRUE)} {year(date)}"), -->
-<!--                    why = amount) %>%  -->
-<!--   mutate_all(as.character) %>%  -->
-<!--   mutate(with = as.character(with), -->
-<!--          when = as.character(when), -->
-<!--          where = as.character(where)) -->
-<!-- ``` -->
+Total research funding: `r scales::dollar(sum(grants$amount, na.rm=TRUE) - 500)`
+
+*Note: I served as the PI unless otherwise noted.*
+
+\vspace{12pt}
+
+
+```{r}
+grants %>% 
+  detailed_entries(
+    when = date, 
+    what = title,
+    with = sponsor, 
+    where = scales::dollar(amount),
+    why =  ifelse(!is.na(PI), glue("{PI} (PI)"), NA)
+  )
+```
 
 # Awards and Honors
 

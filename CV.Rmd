@@ -205,10 +205,10 @@ awards %>%
 # Publications
 
 ```{r}
-data.frame(authors = c("M Rother, J Huffman, C Guiterman, K Robertson, and N Jones"),
-           year = c("In review"),
-           what = c("A history of recurrent, low-severity fire without fire exclusion in southeastern pine savannas, USA"),
-           journal = c("Forest Ecology and Management")
+data.frame(authors = c("CH Guiterman, AM Lynch, and JN Axelson", "M Rother, J Huffman, C Guiterman, K Robertson, and N Jones"),
+           year = c("In review", "In review"),
+           what = c("dfoliatR: An R package for detection and analysis of insect defoliation signals in tree rings", "A history of recurrent, low-severity fire without fire exclusion in southeastern pine savannas, USA"),
+           journal = c("Dendrochronologia", "Forest Ecology and Management")
 ) %>% 
   detailed_entries(with = authors,
                    when = year,

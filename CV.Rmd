@@ -19,6 +19,9 @@ output:
 # Remember to spell check!!
 # data_files <- list.files(here::here("data"), pattern = ".csv", full.names = TRUE)
 # spelling::spell_check_files(c("CV.Rmd", data_files))
+
+# Update website
+# rmarkdown::render("CV.Rmd", output_file = "D:/academic_site/static/files/cv.pdf")
 ```
 
 ```{r setup, include=FALSE}
@@ -99,8 +102,7 @@ edu["why"]
 ``` 
 
 ``` {r publications, include=FALSE}
-# pubs <- read_xlsx(here::here("data", "my_pubs.xlsx"))
-pubs <- read.csv(here("data", "my_pubs.csv"))
+pubs <- read.csv(here("data", "publications.csv"))
 ```
 
 # Education
@@ -123,7 +125,7 @@ brief_entries(edu %>%
                  .protect = FALSE)
 
 ```
-# Positions
+# Work experience
 
 ```{r}
 jobs %>% 
@@ -205,16 +207,16 @@ awards %>%
 # Publications
 
 ```{r}
-data.frame(authors = c("CH Guiterman, AM Lynch, and JN Axelson", "M Rother, J Huffman, C Guiterman, K Robertson, and N Jones"),
-           year = c("In review", "In review"),
-           what = c("dfoliatR: An R package for detection and analysis of insect defoliation signals in tree rings", "A history of recurrent, low-severity fire without fire exclusion in southeastern pine savannas, USA"),
-           journal = c("Dendrochronologia", "Forest Ecology and Management")
+data.frame(authors = c("CH Guiterman, AM Lynch, and JN Axelson"),
+           year = c("In review"),
+           what = c("dfoliatR: An R package for detection and analysis of insect defoliation signals in tree rings"),
+           journal = c("Dendrochronologia")
 ) %>% 
   detailed_entries(with = authors,
                    when = year,
                    what = what,
                    where = journal,
-                   .protect = TRUE)
+                   .protect = FALSE)
 ```
 
 ```{r} 

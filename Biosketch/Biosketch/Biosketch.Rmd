@@ -1,0 +1,123 @@
+---
+name: Chris Guiterman
+#surname: Curie
+position: "Research Scientist"
+address: "Laboratory of Tree-Ring Research, University of Arizona"
+phone: +1 520-230-2341
+www: chris-guiterman.rbind.io
+email: chguiterman@arizona.edu
+twitter: chris.guiterman
+github: chguiterman
+date: "`r format(Sys.time(), '%B %Y')`"
+headcolor: 414141
+# output: vitae::awesomecv
+output: 
+  vitae::moderncv:
+    keep_tex: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+options(tinytex.verbose = TRUE)
+library(vitae)
+library(tidyverse)
+library(lubridate)
+library(here)
+library(readxl)
+library(glue)
+library(conflicted)
+library(scales)
+conflict_prefer("filter", "dplyr")
+conflict_prefer("here", "here")
+```
+# Professional preparation
+
+```{r edu}
+edu.raw <- read_csv(here("data", "education.csv"))
+edu <-
+  edu.raw %>% 
+  mutate(chair = glue("Chair: {chair}"),
+         dissertation = glue("\\textbf{[dissertation]}", 
+                             .open = "[", .close = "]")
+         ) %>% 
+  gather(dissertation, chair, key = "whytype", value = "why")
+edu %>% 
+  filter(whytype == "dissertation") %>% 
+  brief_entries(when = end_date,
+                what = glue("{degree}, {university}, {department}, {location}"),
+                # why = why,
+                .protect = FALSE)
+``` 
+
+
+# Appointments and positions
+
+```{r jobs}
+jobs <- read_csv(here("data", "jobs.csv")) %>%
+   filter(!is.na(start_date)) %>%
+   mutate(Start = mdy(start_date),
+         End = mdy(end_date)) %>%
+  mutate(When = case_when(
+    is.na(End) ~ glue("{year(Start)}--    ") %>% as.character(),
+    year(Start) == year(End) ~ year(End) %>% as.character(),
+    TRUE ~ glue("{year(Start)}--{year(End)}") %>% as.character()
+  )) %>%
+  mutate(End = if_else(is.na(End), today() + years(2), End)) #if no end date specified, set it to two years from now for sorting purposes, i.e. so jobs I'm still doing show up at top
+jobs %>%
+  select(-why) %>%
+  arrange(desc(End)) %>%
+  # filter(where != "Joseph, OR") %>%
+  brief_entries(
+    when = When,
+    what = glue("{what}, {with}, {where}"),
+    .protect = FALSE
+  )
+```
+
+
+# Products
+
+```{r, include = FALSE}
+pubs <- read_csv(here("data", "publications.csv")) %>% 
+  mutate(ID = row_number())
+```
+
+## 5 most closely related to the proposed project:
+
+```{r}
+pubs %>% 
+  filter(ID %in% c(2, 3, 5, 19, 25)) %>% 
+  arrange(desc(pub_date)) %>% 
+  # brief_entries(when = year, 
+  #               what = glue("<author>, <title>, <journal> <number>", 
+  #                           .open = "<", .close = ">"), 
+  #               .protect = FALSE)
+  brief_entries(when = year,
+                what = glue("{author}, {title}, {journal} {number}"),
+                .protect = TRUE)
+```
+\newpage
+## 5 other significant products:
+``` {r}
+pubs %>% 
+  filter(ID %in% c(11, 1, 24, 7, 8)) %>%  
+  arrange(desc(pub_date)) %>% 
+  brief_entries(when = year,
+                what = glue("{author}, {title}, {journal} {number}"),
+                .protect = TRUE)
+
+```
+
+# Synergistic activities
+``` {r}
+tribble(
+  ~ date, ~ what,
+  "2019", "Co-organizer of a southwestern regional workshop, 'Healthy Forests–Healthy Watersheds: Enabling a cultural shift toward understanding the beneficial aspects of forest fire in a changing climate'. We have invited representatives of Tribal natural and cultural resource departments from throughout the region to share their experiences with a group of select resource managers and scientists from academic and government institutions. The workshop consists of talks and break-out sessions to improve understanding and discourse regarding on-the-ground impacts of climate change to cultural landscapes, and adaptation approaches and solutions to solve and mitigate them.",
+  "2018", "Organized a week-long Navajo Forests Tour for which I invited Tribal resource managers and regional scientists, especially young Native scholars. The tour was attended by 50 participants representing 19 academic, government, and Tribal institutions. Each day we travelled to different areas of the Navajo forest to examine and discuss climate-related changes to the ecosystem",
+  "2010 -  ", "I have engaged thousands of visitors to the Laboratory of Tree-Ring Research that attend bi-weekly and special-event docent tours (The lab hosts roughly 12,000 visitors per year). I have also given public lectures at the lab, the university, and at National Park Service visitors’ centers. Finally, I have taught three multi-week intensive field courses in dendrochronology, both at the University of Arizona and at the North American Dendroecological Fieldweek"
+) %>% 
+  brief_entries(when = date,
+                what = what,
+                .protect = TRUE)
+
+```

@@ -38,6 +38,28 @@ conflict_prefer("filter", "dplyr")
 conflict_prefer("here", "here")
 ```
 
+# Education
+
+```{r edu}
+edu.raw <- read_csv(here("data", "education.csv"))
+edu <-
+  edu.raw %>% 
+  mutate(chair = glue("Chair: {chair}"),
+         dissertation = glue("\\textbf{[dissertation]}", 
+                             .open = "[", .close = "]")
+         ) %>% 
+  gather(dissertation, chair, key = "whytype", value = "why")
+
+edu %>% 
+  filter(whytype == "dissertation") %>% 
+  brief_entries(when = end_date,
+                what = degree,
+                with = glue("{university}, {department}, {location}"),
+                .protect = FALSE)
+
+```
+# Work experience
+
 ```{r jobs}
 jobs <- read_csv(here("data", "jobs.csv")) %>% 
    filter(!is.na(start_date)) %>% 
@@ -49,85 +71,7 @@ jobs <- read_csv(here("data", "jobs.csv")) %>%
     TRUE ~ glue("{year(Start)}--{year(End)}") %>% as.character()
   )) %>% 
   mutate(End = if_else(is.na(End), today() + years(2), End)) #if no end date specified, set it to two years from now for sorting purposes, i.e. so jobs I'm still doing show up at top
-```
 
-```{r teaching}
-courses <- read.csv(here("data", "teaching.csv")) %>% 
-  mutate(when = glue("{semester} {year}")) %>% 
-  arrange(desc(year))
-```
-
-```{r presentations, include=FALSE}
- presentations.raw <- read_csv(here("data", "presentations.csv"))
- presentations <- 
-   presentations.raw %>%  
-   mutate(When = mdy(When)) %>% 
-   filter(When < today()) #exclude upcoming talks -->
-``` 
-
-<!-- ```{r prof-devel, include=FALSE} -->
-<!-- development.raw <- read_csv(here("data", "professional development.csv")) -->
-<!-- development <-  -->
-<!--   development.raw %>%  -->
-<!--   mutate(date = mdy(date)) -->
-<!-- ``` -->
-
-<!-- ```{r awards, include=FALSE} -->
-<!-- awards.raw <- read_csv(here("data", "awards and grants.csv")) -->
-<!-- awards <- awards.raw %>%  -->
-<!--   mutate(date = mdy(date)) %>%  -->
-<!--   arrange(desc(date)) -->
-<!-- ``` -->
-
-```{r grants}
-grants_in <- read_csv(here("data", "grants.csv"))
-grants <- grants_in %>% 
-  mutate(date = case_when(
-    is.na(start_year) ~ glue("{end_year}"),
-    TRUE ~ glue("{start_year}--{end_year}")
-  )) %>% 
-  arrange(desc(end_year))
-```
-
-```{r edu, include=FALSE}
-edu.raw <- read_csv(here("data", "education.csv"))
-edu <-
-  edu.raw %>% 
-  mutate(chair = glue("Chair: {chair}"),
-         dissertation = glue("\\textbf{[dissertation]}", 
-                             .open = "[", .close = "]")
-         ) %>% 
-  gather(dissertation, chair, key = "whytype", value = "why")
-edu["why"]
-``` 
-
-``` {r publications, include=FALSE}
-pubs <- read.csv(here("data", "publications.csv"))
-```
-
-# Education
-
-```{r}
-# detailed_entries(edu %>% 
-#                     filter(whytype == "dissertation"),
-#                  when = end_date,
-#                  what = degree,
-#                  where = location,
-#                  with = glue("{university}, {department}"),
-#                  # why = why,
-#                  .protect = FALSE)
-brief_entries(edu %>% 
-                    filter(whytype == "dissertation"),
-                 when = end_date,
-                 what = degree,
-                 with = glue("{university}, {department}, {location}"),
-                 # why = why,
-                 .protect = FALSE)
-
-```
-# Work experience
-
-```{r}
 jobs %>% 
   select(-why) %>% 
   arrange(desc(End)) %>% 
@@ -147,14 +91,18 @@ jobs %>%
 
 # Courses Taught
 ## Lead or co-instructor
-```{r}
+
+```{r teaching}
+courses <- read.csv(here("data", "teaching.csv")) %>% 
+  mutate(when = glue("{semester} {year}")) %>% 
+  arrange(desc(year))
+
 courses %>% 
   filter(tag == "Instructor") %>% 
-  detailed_entries(
+  brief_entries(
     when = when,
     what = what,
-    with = with,
-    where = where,
+    with = glue("{with}, {where}"),
     .protect = FALSE
   )
 ```
@@ -162,16 +110,25 @@ courses %>%
 ```{r}
 courses %>% 
   filter(tag == "TA") %>% 
-  detailed_entries(
+  brief_entries(
     when = when,
     what = what,
-    with = with,
-    where = where,
+    with = glue("{with}, {where}"),
     .protect = FALSE
   )
 ```
 
 # Grants & Fellowships
+
+```{r grants data}
+grants <- read_csv(here("data", "grants.csv")) %>% 
+  mutate(date = case_when(
+    is.na(start_year) ~ glue("{end_year}"),
+    TRUE ~ glue("{start_year}--{end_year}")
+  )
+  ) %>% 
+  arrange(desc(end_year))
+```
 
 Total research funding: `r dollar(sum(grants$amount, na.rm=TRUE) - 500)`
 
@@ -179,8 +136,24 @@ Total research funding: `r dollar(sum(grants$amount, na.rm=TRUE) - 500)`
 
 \vspace{12pt}
 
+```{r submitted grants}
+sub_gr <- tribble(~ date, ~ title, ~ sponsor, ~ amount, ~ collab,
+                  "Submitted", "Resilience in a longleaf savanna: Historical tree recruitment in response to frequent disturbance and climate variability", "Wade Research Foundation", 75000, "M.T. Rother",
+                  "In-prep (2nd round)", "Feedbacks and scale at an ancient wildland-urban interface", "NSF Dynamics of Integrated Socio-Environmental Systems", 1599949, "C.I. Roos (PI). UofA share $355,382."
+                  )
+sub_gr %>% 
+    detailed_entries(
+    when = date, 
+    what = title,
+    with = sponsor, 
+    where = dollar(amount),
+    # why =  ifelse(!is.na(PI), glue("{PI} (PI)"), NA)
+    why = ifelse(!is.na(collab), glue("with {collab}"), NA)
+  )
 
-```{r}
+```
+
+```{r awarded grants}
 grants %>% 
   detailed_entries(
     when = date, 
@@ -192,7 +165,7 @@ grants %>%
   )
 ```
 
-\newpage
+<!-- \newpage -->
 
 # Awards and Honors
 ```{r awards}
@@ -206,11 +179,14 @@ awards %>%
 
 # Publications
 
-```{r}
-data.frame(authors = c("CH Guiterman, AM Lynch, and JN Axelson"),
+``` {r publications}
+pubs <- read_csv(here("data", "publications.csv")) %>% 
+  mutate(pub_date = mdy(pub_date))
+
+data.frame(authors = c("B Brice, CH Guiterman, C Woodhouse, C McClellan, and PR Sheppard"),
            year = c("In review"),
-           what = c("dfoliatR: An R package for detection and analysis of insect defoliation signals in tree rings"),
-           journal = c("Dendrochronologia")
+           what = c("Comparing tree-ring based reconstructions of snowpack variability at different scales"),
+           journal = c("Climate Services")
 ) %>% 
   detailed_entries(with = authors,
                    when = year,
@@ -267,7 +243,10 @@ df %>%
 # Presentations
 
 ## Invited seminars
-```{r}
+```{r presentations}
+ presentations <- read_csv(here("data", "presentations.csv")) %>%  
+   mutate(When = mdy(When)) 
+
 presentations %>% 
   filter(Tag == "seminar") %>% 
   arrange(desc(When)) %>% 

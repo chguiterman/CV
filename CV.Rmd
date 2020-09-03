@@ -5,7 +5,7 @@ address: "Laboratory of Tree-Ring Research, University of Arizona"
 phone: +1 520-230-2341
 www: chris-guiterman.rbind.io
 email: chguiterman@arizona.edu
-twitter: chris.guiterman
+twitter: ChrisGuiterman
 github: chguiterman
 aboutme: |
  Forest and fire ecology | Forest vulnerabilities to climate change | Vegetation type conversion | Use-inspired research | Applications in dendrochronology
@@ -13,6 +13,8 @@ date: "`r format(Sys.time(), '%B %Y')`"
 output: 
   vitae::moderncv:
     theme: classic
+#preamble: |
+#  \AtBeginDocument{\hypersetup{baseurl={}}}
 ---
 
 ```{r eval=FALSE, include=FALSE}

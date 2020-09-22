@@ -185,10 +185,11 @@ awards %>%
 pubs <- read_csv(here("data", "publications.csv")) %>% 
   mutate(pub_date = mdy(pub_date))
 
-data.frame(authors = c("B Brice, CH Guiterman, C Woodhouse, C McClellan, and PR Sheppard"),
-           year = c("In review"),
-           what = c("Comparing tree-ring based reconstructions of snowpack variability at different scales"),
-           journal = c("Climate Services")
+data.frame(authors = c("C Roos, T Swetnam, T Ferguson, M Liebmann, R Loehman, J Welch, E Margolis, C Guiterman, W Hockaday, M Aiuvalasit, J Battillo, J Farella, C Kiahtipes, C Toya, P Tosa", "B Brice, CH Guiterman, C Woodhouse, C McClellan, and PR Sheppard"),
+           year = c("Submitted", "In review"),
+           what = c("Native American fire management at an ancient wildland-urban interface
+in the Southwest US", "Comparing tree-ring based reconstructions of snowpack variability at different scales"),
+           journal = c("Proceedings of the National Academy of Sciences", "Climate Services")
 ) %>% 
   detailed_entries(with = authors,
                    when = year,

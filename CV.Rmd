@@ -1,6 +1,6 @@
 ---
 name: "Chris Guiterman"
-position: "Research Scientist"
+# position: "Research Scientist"
 address: "Laboratory of Tree-Ring Research, University of Arizona"
 phone: +1 520-230-2341
 www: chris-guiterman.rbind.io
@@ -8,13 +8,16 @@ email: chguiterman@arizona.edu
 twitter: ChrisGuiterman
 github: chguiterman
 aboutme: |
- Forest and fire ecology | Forest vulnerabilities to climate change | Vegetation type conversion | Use-inspired research | Applications in dendrochronology
+ Forest and fire ecology | Vegetation type conversion | Forest vulnerabilities to climate change | Use-inspired research | Applications in dendrochronology
 date: "`r format(Sys.time(), '%B %Y')`"
 output: 
   vitae::moderncv:
     theme: classic
-#preamble: |
+preamble: |
+  \usepackage{fontspec}
+
 #  \AtBeginDocument{\hypersetup{baseurl={}}}
+
 ---
 
 ```{r eval=FALSE, include=FALSE}
@@ -91,35 +94,6 @@ jobs %>%
 <!-- A sentence or two about the sorts of courses I'd like to teach.  Tailor to each job application -->
 <!-- -->
 
-# Courses Taught
-## Lead or co-instructor
-
-```{r teaching}
-courses <- read.csv(here("data", "teaching.csv")) %>% 
-  mutate(when = glue("{semester} {year}")) %>% 
-  arrange(desc(year))
-
-courses %>% 
-  filter(tag == "Instructor") %>% 
-  brief_entries(
-    when = when,
-    what = what,
-    with = glue("{with}, {where}"),
-    .protect = FALSE
-  )
-```
-## Teaching assistant
-```{r}
-courses %>% 
-  filter(tag == "TA") %>% 
-  brief_entries(
-    when = when,
-    what = what,
-    with = glue("{with}, {where}"),
-    .protect = FALSE
-  )
-```
-
 # Grants & Fellowships
 
 ```{r grants data}
@@ -180,22 +154,23 @@ awards %>%
 ```
 
 # Publications
+## Refereed articles
 
 ``` {r publications}
 pubs <- read_csv(here("data", "publications.csv")) %>% 
   mutate(pub_date = mdy(pub_date))
 
-data.frame(authors = c("C Roos, T Swetnam, T Ferguson, M Liebmann, R Loehman, J Welch, E Margolis, C Guiterman, W Hockaday, M Aiuvalasit, J Battillo, J Farella, C Kiahtipes, C Toya, P Tosa", "B Brice, CH Guiterman, C Woodhouse, C McClellan, and PR Sheppard"),
+data.frame(authors = c("C Roos, T Swetnam, T Ferguson, M Liebmann, R Loehman, J Welch, E Margolis, C Guiterman, W Hockaday, M Aiuvalasit, J Battillo, J Farella, C Kiahtipes, C Toya, and P Tosa", "B Brice, CH Guiterman, C Woodhouse, C McClellan, and PR Sheppard"),
            year = c("Submitted", "In review"),
-           what = c("Native American fire management at an ancient wildland-urban interface
+           title = c("Native American fire management at an ancient wildland-urban interface
 in the Southwest US", "Comparing tree-ring based reconstructions of snowpack variability at different scales"),
            journal = c("Proceedings of the National Academy of Sciences", "Climate Services")
 ) %>% 
   detailed_entries(with = authors,
                    when = year,
-                   what = what,
+                   what = title,
                    where = journal,
-                   .protect = FALSE)
+                   .protect = TRUE)
 ```
 
 ```{r} 
@@ -206,7 +181,7 @@ pubs %>%
                    when = year,
                    what = title,
                    where = glue("{journal} {number}, doi:{doi}"), 
-                   .protect = TRUE)
+                   .protect = FALSE)
 ```
 ## Other publications and reports
 ```{r} 
@@ -273,8 +248,8 @@ presentations %>%
                    .protect = FALSE)
 ```
 
-## Conference posters (last five years)
-``` {r}
+<!-- ## Conference posters (last five years) -->
+``` {r, include=FALSE}
 presentations %>%
   filter(Tag == "poster") %>%
   arrange(desc(When)) %>%
@@ -285,6 +260,35 @@ presentations %>%
                    why = Why, 
                    .protect = FALSE)
 ```                   
+
+# Teaching
+## Lead or co-instructor
+
+```{r teaching}
+courses <- read.csv(here("data", "teaching.csv")) %>% 
+  mutate(when = glue("{semester} {year}")) %>% 
+  arrange(desc(year))
+
+courses %>% 
+  filter(tag == "Instructor") %>% 
+  brief_entries(
+    when = when,
+    what = what,
+    with = glue("{with}, {where}"),
+    .protect = FALSE
+  )
+```
+## Teaching assistant
+```{r}
+courses %>% 
+  filter(tag == "TA") %>% 
+  brief_entries(
+    when = when,
+    what = what,
+    with = glue("{with}, {where}"),
+    .protect = FALSE
+  )
+```
 
 # Service
 

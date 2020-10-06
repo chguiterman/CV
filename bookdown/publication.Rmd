@@ -1,0 +1,73 @@
+# Publications
+
+<!-- ## Selected Publications
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+::: {#refs_selected}
+:::
+\endgroup -->
+
+## Refereed Journal Papers
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{1.0in}
+
+::: {#refs_journals}
+:::
+\endgroup
+
+\vspace{12pt}
+
+## Papers in review
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{1.0in}
+
+::: {#refs_inreview}
+:::
+\endgroup
+
+\vspace{12pt}
+
+## Other publications and reports
+```{r} 
+pubs <- read_csv(here("data", "publications.csv")) %>% 
+  mutate(pub_date = mdy(pub_date))
+pubs %>% 
+  filter(type == "report") %>% 
+  arrange(desc(pub_date)) %>% 
+  detailed_entries(with = glue("{author}"),
+                   when = year,
+                   what = title,
+                   where = glue("{journal}")
+  )
+```
+
+
+## Software
+```{r}
+df <- tribble(~what, ~when, ~with, ~where, ~why,
+              "dfoliatR: detection and analysis of insect defoliation signals in tree rings", 2020, "CH Guiterman, AM Lynch, AN Axelson",
+              "https://chguiterman.github.io/dfoliatR/", "Author, Creator, Maintainer",
+              "burnr: Advanced fire history tools in R", 2016, 
+              "SB Malevich, CH Guiterman, EQ Margolis",
+              "https://cran.r-project.org/web/packages/burnr/index.html",
+              "Author, Contributor",
+              "suRge: An extension of dfoliatR to accomodate insect-induced growth surges in trees", 2019, "developed for Amy Hessl (West Virginia University)", "https://github.com/chguiterman/suRge", "Author, Creator",
+              "slideRun: An extension of burnr to assess avalanche damage patterns on trees", 2018, "developed for Erich Peitzsch and Greg Pederson (USGS Montana)",
+              "https://github.com/chguiterman/slideRun", "Author, Creator",
+              "burnr_demo: A module-based R project for educating burnr users", 2017, "CH Guiterman", "https://github.com/chguiterman/burnr_demo", "Author, Creator"
+)
+df %>% 
+  detailed_entries(what = what, 
+                   when = when, 
+                   with = with, 
+                   where = where, 
+                   why = NULL)
+
+```

@@ -1,0 +1,9 @@
+# Awards and Honors
+```{r awards}
+awards <- read.csv(here("data", "awards.csv")) %>% 
+  arrange(desc(when))
+awards %>% 
+  brief_entries(when = when,
+                what = what,
+                with = where)
+```

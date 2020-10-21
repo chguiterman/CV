@@ -1,0 +1,26 @@
+# Work experience
+
+```{r jobs}
+jobs <- read_csv(here("data", "jobs.csv")) %>% 
+   filter(!is.na(start_date)) %>% 
+   mutate(Start = mdy(start_date),
+         End = mdy(end_date)) %>% 
+  mutate(When = case_when(
+    is.na(End) ~ glue("{year(Start)}--    ") %>% as.character(),
+    year(Start) == year(End) ~ year(End) %>% as.character(),
+    TRUE ~ glue("{year(Start)}--{year(End)}") %>% as.character()
+  )) %>% 
+  mutate(End = if_else(is.na(End), today() + years(2), End)) #if no end date specified, set it to two years from now for sorting purposes, i.e. so jobs I'm still doing show up at top
+
+jobs %>% 
+  select(-why) %>% 
+  arrange(desc(End)) %>% 
+  # filter(where != "Joseph, OR") %>% 
+  brief_entries(
+    what = what,
+    when = When,
+    with = glue("{with}, {where}"),
+    .protect = FALSE
+  )
+
+```

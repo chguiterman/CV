@@ -19,6 +19,7 @@ nocite: "@*"
 knit: bookdown::render_book
 bibliography_journals: "data/Journal_publications2.bib"
 bibliography_inreview: "data/Journal_inReview.bib"
+bibliography_reports: "data/Other_pubs.bib"
 #preamble: |
 #  \AtBeginDocument{\hypersetup{baseurl={}}}
 ---

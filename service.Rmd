@@ -1,0 +1,27 @@
+
+# Service
+
+**Journal peer reviews:** *Dendrochronologia,
+Fire Ecology,
+Forest Ecology and Management,
+Forest Science,
+Geophysical Research Letters,
+International Journal of Wildland Fire,
+Journal of Archaeological Method and Theory,
+Journal of Biogeography,
+Journal of Contemporary Water Research and Education,
+Journal of Hydrology,
+Journal of Vegetation Science,
+Tree-Ring Research,
+Urban Forestry and Urban Greening*
+
+\vspace{12pt}
+
+```{r}
+serv <- read.csv(here("data", "service.csv")) 
+serv %>% 
+  arrange(desc(when)) %>% 
+  detailed_entries(when = when,
+                   what = what,
+                   where = where)
+```

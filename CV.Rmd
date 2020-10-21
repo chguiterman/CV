@@ -1,5 +1,13 @@
 ---
+<<<<<<< Updated upstream
 name: "Chris Guiterman"
+=======
+graphics: yes
+name: Chris
+surname: Guiterman
+given-name-pattern: Christopher
+family-name-pattern: Guiterman
+>>>>>>> Stashed changes
 # position: "Research Scientist"
 address: "Laboratory of Tree-Ring Research, University of Arizona"
 phone: +1 520-230-2341
@@ -10,12 +18,22 @@ github: chguiterman
 aboutme: |
  Forest and fire ecology | Vegetation type conversion | Forest vulnerabilities to climate change | Use-inspired research | Applications in dendrochronology
 date: "`r format(Sys.time(), '%B %Y')`"
+<<<<<<< Updated upstream
 output: 
   vitae::moderncv:
     theme: classic
 preamble: |
   \usepackage{fontspec}
 
+=======
+csl: "csl/apa6-cv.csl"
+nocite: "@*"
+knit: bookdown::render_book
+bibliography_journals: "data/Journal_publications2.bib"
+bibliography_inreview: "data/Journal_inReview.bib"
+bibliography_reports: "data/Other_pubs.bib"
+#preamble: |
+>>>>>>> Stashed changes
 #  \AtBeginDocument{\hypersetup{baseurl={}}}
 
 ---
@@ -24,9 +42,6 @@ preamble: |
 # Remember to spell check!!
 # data_files <- list.files(here::here("data"), pattern = ".csv", full.names = TRUE)
 # spelling::spell_check_files(c("CV.Rmd", data_files))
-
-# Update website
-# rmarkdown::render("CV.Rmd", output_file = "D:/academic_site/static/files/cv.pdf")
 ```
 
 ```{r setup, include=FALSE}
@@ -42,6 +57,7 @@ library(scales)
 conflict_prefer("filter", "dplyr")
 conflict_prefer("here", "here")
 ```
+<<<<<<< Updated upstream
 
 # Education
 
@@ -325,3 +341,5 @@ serv %>%
 * Association for Fire Ecology
 * Association of American Geographers
 * Society of American Archaeology
+=======
+>>>>>>> Stashed changes

@@ -15,6 +15,7 @@
 \begingroup
 \setlength{\parindent}{-0.5in}
 \setlength{\leftskip}{1.0in}
+\setlength{\parskip}{8pt}
 
 ::: {#refs_journals}
 :::
@@ -27,6 +28,7 @@
 \begingroup
 \setlength{\parindent}{-0.5in}
 \setlength{\leftskip}{1.0in}
+\setlength{\parskip}{8pt}
 
 ::: {#refs_inreview}
 :::
@@ -39,6 +41,7 @@
 \begingroup
 \setlength{\parindent}{-0.5in}
 \setlength{\leftskip}{1.0in}
+\setlength{\parskip}{8pt}
 
 ::: {#refs_reports}
 :::

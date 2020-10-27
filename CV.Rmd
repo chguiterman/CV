@@ -5,7 +5,7 @@ surname: Guiterman
 given-name-pattern: Christopher
 family-name-pattern: Guiterman
 # position: "Research Scientist"
-address: "Laboratory of Tree-Ring Research, University of Arizona"
+address: "Laboratory of Tree-Ring Research, University of Arizona \\tabularnewline Permanent residence: Hanover, New Hampshire. \\tabularnewline"
 phone: +1 520-230-2341
 www: chris-guiterman.rbind.io
 email: chguiterman@arizona.edu
@@ -20,8 +20,7 @@ knit: bookdown::render_book
 bibliography_journals: "data/Journal_publications2.bib"
 bibliography_inreview: "data/Journal_inReview.bib"
 bibliography_reports: "data/Other_pubs.bib"
-#preamble: |
-#  \AtBeginDocument{\hypersetup{baseurl={}}}
+
 ---
 
 ```{r eval=FALSE, include=FALSE}

@@ -1,9 +1,7 @@
 {
-<<<<<<< Updated upstream
-    "path": "~/Academic/CV/docs",
-=======
-    "path": "~/Academic/CV",
->>>>>>> Stashed changes
+
+"path": "~/Academic/CV/csl",
+
     "sortOrder": [
         {
             "columnIndex": 2,

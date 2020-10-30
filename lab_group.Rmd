@@ -1,0 +1,36 @@
+# Student Research Assistants & Mentees
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{1.0in}
+<!-- \setlength{\parskip}{8pt} -->
+
+**Eze Ahanonu**, undergraduate, field and lab (2014-2016)
+
+**Royale Billy-Wilson**, undergraduate, field and lab (2015-2017)
+
+**Patrick Brewer**, undergraduate, field and lab (2015-2016)
+
+
+**Alec Gagliano**, undergraduate, field and lab (2016-2018)
+
+**Galen Gudenkauf**, undergraduate, field (2014)
+
+**Jordan Krcmaric**, post-graduate, field (2017)
+
+**Ben Olimpio**, undergraduate, lab (2016-2017)
+
+**Anna Penaloza**, undergraduate, lab (2013)
+
+**Gabryl Sam**, post-graduate, field (2019)
+
+**Melissa Schwan**, undergraduate and post-graduate, field and lab (2015-2018)
+
+**Eric Shreve**, undergraduate, lab (2012-2013)
+
+**Jaime Yazzie**, post-graduate, field (2019)
+
+
+\endgroup
+
+\vspace{12pt}

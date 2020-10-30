@@ -10,6 +10,8 @@ rmd_files:
   - "service.Rmd"
   - "presentations.Rmd"  
   - "memberships.Rmd"
+  - "lab_group.Rmd"
+  - "references.Rmd"
 
 book_filename: "Guiterman_CV"
 delete_merged_file: true

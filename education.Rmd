@@ -10,8 +10,8 @@ edu <-
          ) %>% 
   gather(dissertation, chair, key = "whytype", value = "why")
 
-edu %>% 
-  filter(whytype == "dissertation") %>% 
+edu %>%
+  filter(whytype == "dissertation") %>%
   brief_entries(when = end_date,
                 what = degree,
                 with = glue("{university}, {department}, {location}"),

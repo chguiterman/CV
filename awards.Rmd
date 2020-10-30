@@ -1,4 +1,4 @@
-# Awards and Honors
+# Awards & Honors
 ```{r awards}
 awards <- read.csv(here("data", "awards.csv")) %>% 
   arrange(desc(when))

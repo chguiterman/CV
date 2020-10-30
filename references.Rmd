@@ -1,0 +1,22 @@
+\newpage
+
+# Additional references
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{1.0in}
+\setlength{\parskip}{8pt}
+
+**Alexious Becenti**, Head Forester, Navajo Forestry Department, Ft Defiance, AZ. 928-729-4007, acbecenti_nfd@frontiernet.net
+
+**William Tsosie**, Forest Archaeologist, Navajo Heritage and Historic Preservation Department, Window Rock, AZ. 928-871-6540, wtsosie@navajo-nsn.gov
+
+**John Neely**, Assistant Fire Management Officer (South Zone), White Mountain National Forest, Campton, NH. 603-536-6261, john.neely@usda.gov
+
+**Thomas Swetnam**, Regents Professor Emeritus of Dendrochronology, University of Arizona, Tucson, AZ. 575-829-4649, swetnamt@arizona.edu
+
+**Craig Allen**, Research Ecologist, United States Geological Survey, Los Alamos, NM. 505-672-3861 ext. 1720, craig_allen@usgs.gov
+
+**Julio Betancourt**, Scientist Emeritus, United States Geological Survey, Reston, VA. 703-648-5840, jlbetanc51@gmail.com
+
+\endgroup

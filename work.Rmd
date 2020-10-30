@@ -1,4 +1,4 @@
-# Work experience
+# Work Experience
 
 ```{r jobs}
 jobs <- read_csv(here("data", "jobs.csv")) %>% 

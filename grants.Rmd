@@ -13,15 +13,16 @@ grants <- read_csv(here("data", "grants.csv")) %>%
 
 Total research funding: `r dollar(sum(grants$amount, na.rm=TRUE) - 500)`
 
-*Note: I served as the project lead and/or PI unless otherwise noted.*
+*Note: I served as the project lead and/or PI unless otherwise specified*
 
 \vspace{12pt}
 
 ```{r submitted grants}
 sub_gr <- tribble(~ date, ~ title, ~ sponsor, ~ amount, ~ collab,
-                 "Submittted", "burnrData: The North American tree-ring fire history database in R", "USGS Community for Data Integration", 49964, "Ellis Margolis",
-                  "In-prep (2nd round)", "Feedbacks and scale at an ancient wildland-urban interface", "NSF Dynamics of Integrated Socio-Environmental Systems", 1599949, "Chris Roos (PI). UofA (Guiterman co-PI) share $362,117."
-                  )
+                  "Nov 2020 submission", "Feedbacks and scale at an ancient wildland-urban interface", "NSF Dynamics of Integrated Socio-Environmental Systems", 1599949, "Chris Roos (PI). UofA (Guiterman co-PI) share $362,117.",
+                  "In review", "burnrData: The North American tree-ring fire history database in R", "USGS Community for Data Integration", 49964, "Ellis Margolis"
+)
+
 sub_gr %>% 
     detailed_entries(
     when = date, 

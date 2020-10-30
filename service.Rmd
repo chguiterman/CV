@@ -1,10 +1,14 @@
 
 # Service
 
+\begingroup
+\setlength{\leftskip}{0.5in}
+
 **Journal peer reviews:** *Dendrochronologia,
 Fire Ecology,
 Forest Ecology and Management,
 Forest Science,
+Global Ecology and Biogeography,
 Geophysical Research Letters,
 International Journal of Wildland Fire,
 Journal of Archaeological Method and Theory,
@@ -14,6 +18,8 @@ Journal of Hydrology,
 Journal of Vegetation Science,
 Tree-Ring Research,
 Urban Forestry and Urban Greening*
+
+\endgroup
 
 \vspace{12pt}
 

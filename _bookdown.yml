@@ -12,5 +12,6 @@ rmd_files:
   - "memberships.Rmd"
   - "lab_group.Rmd"
 
+
 book_filename: "Guiterman_CV"
 delete_merged_file: true

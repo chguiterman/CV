@@ -1,0 +1,30 @@
+
+# Teaching Experience
+## Lead or co-instructor
+
+```{r teaching}
+courses <- read.csv(here("data", "teaching.csv")) %>% 
+  mutate(when = glue("{semester} {year}")) %>% 
+  arrange(desc(year))
+
+courses %>% 
+  filter(tag == "Instructor") %>% 
+  detailed_entries(
+    when = when,
+    what = what,
+    with = glue("{with}, {where}"),
+    why = glue("{description}"),
+    .protect = FALSE
+  )
+```
+## Teaching assistant
+```{r}
+courses %>% 
+  filter(tag == "TA") %>% 
+  brief_entries(
+    when = when,
+    what = what,
+    with = glue("{with}, {where}"),
+    .protect = FALSE
+  )
+```

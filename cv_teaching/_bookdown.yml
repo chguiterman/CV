@@ -1,0 +1,17 @@
+output_dir: "docs"
+rmd_files:
+  - "CV_teaching.Rmd"
+  - "../education.Rmd"
+  - "../work.Rmd"
+  - "teaching_teaching.Rmd" 
+  - "../grants.Rmd"
+  - "../awards.Rmd"  
+  - "../publication.Rmd"  
+  - "../service.Rmd"
+  - "../presentations.Rmd"  
+  - "../memberships.Rmd"
+  - "../lab_group.Rmd"
+
+
+book_filename: "Guiterman_CV"
+delete_merged_file: true

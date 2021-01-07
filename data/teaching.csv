@@ -1,13 +1,13 @@
-year,semester,what,with,where,tag
-2003,Fall,Structural Geology (230),Geology Department,Bates College,TA
-2008,Sum.,Forestry Summer Field Experience (300),School of Forest Resources,University of Maine,TA
-2009,Sum.,Forestry Summer Field Experience (300),School of Forest Resources,University of Maine,TA
-2010,Fall,Physical Geography (101),School of Geography and Development,University of Arizona,TA
-2011,Sum.,Dendroecology Fieldcourse (497/597),Laboratory of Tree-Ring Research,University of Arizona,Instructor
-2011,Fall,Field Course -- Reading a Landscape (397),School of Geography and Development,University of Arizona,Instructor
-2011,Fall,Our Dynamic Landscape (240),School of Geography and Development,University of Arizona,Instructor
-2012,Sum.,North American Dendroecological Fieldweek (NADEF),Intro group,"Jemez Mountains, New Mexico",Instructor
-2013,Sum.,Our Changing Climate (Online; 230),School of Geography and Development,University of Arizona,Instructor
-2013,Win.,Our Changing Climate (Online; 230),School of Geography and Development,University of Arizona,Instructor
-2014,Spr.,Field Study in Environmental Geography (303),School of Geography and Development,University of Arizona,Instructor
-2019,Sum.,Dendrochronology Intensive Summer Course (DISC),Laboratory of Tree-Ring Research,University of Arizona,Instructor
+year,semester,what,with,where,tag,description
+2003,Fall,Structural Geology (230),Geology Department,Bates College,TA,
+2008,Sum.,Forestry Summer Field Experience (300),School of Forest Resources,University of Maine,TA,
+2009,Sum.,Forestry Summer Field Experience (300),School of Forest Resources,University of Maine,TA,
+2010,Fall,Physical Geography (101),School of Geography and Development,University of Arizona,TA,
+2011,Sum.,Dendroecology Fieldcourse (497/597),Laboratory of Tree-Ring Research,University of Arizona,Instructor,A three-week hands-on course covering the essentials of dendrochronology from fieldwork and lab processing to analyses and interpretation
+2011,Fall,Field Course -- Reading a Landscape (397),School of Geography and Development,University of Arizona,Instructor,A half-semester course offering readings-based discussions and a two-night fieldtrip to the Chiricahua Mountains in southern Arizona
+2011,Fall,Our Dynamic Landscape (240),School of Geography and Development,University of Arizona,Instructor,"A semester-long survey course covering environmental processes (e.g., plate tectonics), human impacts on ecosystems (e.g., land-use change), and climate change"
+2012,Sum.,North American Dendroecological Fieldweek (NADEF),Intro group,"Jemez Mountains, New Mexico",Instructor,A ten-day intensive overview of dendrochronology
+2013,Sum.,Our Changing Climate (Online; 230),School of Geography and Development,University of Arizona,Instructor,A five-week intensive online course covering the causes and consequences of anthropogenic climate change
+2013,Win.,Our Changing Climate (Online; 230),School of Geography and Development,University of Arizona,Instructor,A three-week intensive online course covering the causes and consequences of anthropogenic climate change
+2014,Spr.,Field Study in Environmental Geography (303),School of Geography and Development,University of Arizona,Instructor,"A semester-long field-based course on environmental data collection, interpretation, and presentation"
+2019,Sum.,Dendrochronology Intensive Summer Course (DISC),Laboratory of Tree-Ring Research,University of Arizona,Instructor,A three-week hands-on course covering the essentials of dendrochronology from fieldwork and lab processing to analyses and interpretation

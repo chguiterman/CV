@@ -19,8 +19,8 @@ Total research funding: `r dollar(sum(grants$amount, na.rm=TRUE) - 500)`
 
 ```{r submitted grants}
 sub_gr <- tribble(~ date, ~ title, ~ sponsor, ~ amount, ~ collab,
-                  "Nov 2020 submission", "Feedbacks and scale at an ancient wildland-urban interface", "NSF Dynamics of Integrated Socio-Environmental Systems", 1599949, "Chris Roos (PI). UofA (Guiterman co-PI) share $362,117.",
-                  "In review", "burnrData: The North American tree-ring fire history database in R", "USGS Community for Data Integration", 49964, "Ellis Margolis"
+                  "Submitted", "Feedbacks and scale at an ancient wildland-urban interface", "NSF Dynamics of Integrated Socio-Environmental Systems", 1599949, "Chris Roos (PI). UofA (Guiterman co-PI) share $362,117.",
+                  "Invited, second round", "rIMPD: The North American tree-ring fire history database in R", "USGS Community for Data Integration", 50000, "Ellis Margolis"
 )
 
 sub_gr %>% 

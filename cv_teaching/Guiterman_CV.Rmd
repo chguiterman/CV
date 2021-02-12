@@ -1,0 +1,420 @@
+---
+graphics: yes
+name: Chris
+surname: Guiterman
+given-name-pattern: Christopher
+family-name-pattern: Guiterman
+headcolor: 00008B
+# position: "Research Scientist"
+address: "Laboratory of Tree-Ring Research, University of Arizona \\tabularnewline Permanent residence: Hanover, New Hampshire \\tabularnewline"
+phone: +1 781-296-3667
+www: chris-guiterman.rbind.io
+email: chguiterman@arizona.edu
+twitter: ChrisGuiterman
+github: chguiterman
+aboutme: |
+ Forest and fire ecology | Climate change | Coupled human-natural systems | Applications in dendrochronology
+date: "`r format(Sys.time(), '%B %Y')`"
+csl: "../csl/apa6-cv.csl"
+nocite: "@*"
+knit: bookdown::render_book
+bibliography_journals: "../data/Journal_publications2.bib"
+bibliography_inreview: "../data/Journal_inReview.bib"
+bibliography_inprep: "../data/Journal_inPrep.bib"
+bibliography_reports: "../data/Other_pubs.bib"
+
+---
+
+```{r eval=FALSE, include=FALSE}
+# Remember to spell check!!
+# data_files <- list.files(here::here("data"), pattern = ".csv", full.names = TRUE)
+# spelling::spell_check_files(c("CV.Rmd", data_files))
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tidyverse)
+library(lubridate)
+library(here)
+library(readxl)
+library(glue)
+library(conflicted)
+library(scales)
+conflict_prefer("filter", "dplyr")
+conflict_prefer("here", "here")
+```
+
+<!--chapter:end:CV_teaching.Rmd-->
+
+# Education
+
+```{r edu}
+edu.raw <- read_csv(here("data", "education.csv"))
+edu <-
+  edu.raw %>% 
+  mutate(chair = glue("Chair: {chair}"),
+         dissertation = glue("\\textbf{[dissertation]}", 
+                             .open = "[", .close = "]")
+         ) %>% 
+  gather(dissertation, chair, key = "whytype", value = "why")
+
+edu %>%
+  filter(whytype == "dissertation") %>%
+  brief_entries(when = end_date,
+                what = degree,
+                with = glue("{university}, {department}, {location}"),
+                .protect = FALSE)
+
+```
+
+<!--chapter:end:../education.Rmd-->
+
+# Work Experience
+
+```{r jobs}
+jobs <- read_csv(here("data", "jobs.csv")) %>% 
+   filter(!is.na(start_date)) %>% 
+   mutate(Start = mdy(start_date),
+         End = mdy(end_date)) %>% 
+  mutate(When = case_when(
+    is.na(End) ~ glue("{year(Start)}--    ") %>% as.character(),
+    year(Start) == year(End) ~ year(End) %>% as.character(),
+    TRUE ~ glue("{year(Start)}--{year(End)}") %>% as.character()
+  )) %>% 
+  mutate(End = if_else(is.na(End), today() + years(2), End)) #if no end date specified, set it to two years from now for sorting purposes, i.e. so jobs I'm still doing show up at top
+
+jobs %>% 
+  select(-why) %>% 
+  arrange(desc(End)) %>% 
+  # filter(where != "Joseph, OR") %>% 
+  brief_entries(
+    what = what,
+    when = When,
+    with = glue("{with}, {where}"),
+    .protect = FALSE
+  )
+
+```
+
+<!--chapter:end:../work.Rmd-->
+
+
+# Teaching Experience
+## Lead or co-instructor
+
+```{r teaching}
+courses <- read.csv(here("data", "teaching.csv")) %>% 
+  mutate(when = glue("{semester} {year}")) %>% 
+  arrange(desc(year))
+
+courses %>% 
+  filter(tag == "Instructor") %>% 
+  detailed_entries(
+    when = when,
+    what = what,
+    with = glue("{with}, {where}"),
+    why = glue("{description}"),
+    .protect = FALSE
+  )
+```
+## Teaching assistant
+```{r}
+courses %>% 
+  filter(tag == "TA") %>% 
+  brief_entries(
+    when = when,
+    what = what,
+    with = glue("{with}, {where}"),
+    .protect = FALSE
+  )
+```
+
+<!--chapter:end:teaching_teaching.Rmd-->
+
+
+# Grants & Fellowships
+
+```{r grants data}
+grants <- read_csv(here("data", "grants.csv")) %>% 
+  mutate(date = case_when(
+    is.na(start_year) ~ glue("{end_year}"),
+    TRUE ~ glue("{start_year}--{end_year}")
+  )
+  ) %>% 
+  arrange(desc(end_year))
+```
+
+Total research funding: `r dollar(sum(grants$amount, na.rm=TRUE) - 500)`
+
+*Note: I served as the project lead and/or PI unless otherwise specified*
+
+\vspace{12pt}
+
+```{r submitted grants}
+sub_gr <- tribble(~ date, ~ title, ~ sponsor, ~ amount, ~ collab,
+                  "Submitted", "Feedbacks and scale at an ancient wildland-urban interface", "NSF Dynamics of Integrated Socio-Environmental Systems", 1599949, "Chris Roos (PI). UofA (Guiterman co-PI) share $362,117.",
+                  "Invited, second round", "rIMPD: The North American tree-ring fire history database in R", "USGS Community for Data Integration", 50000, "Ellis Margolis"
+)
+
+sub_gr %>% 
+    detailed_entries(
+    when = date, 
+    what = title,
+    with = sponsor, 
+    where = dollar(amount),
+    # why =  ifelse(!is.na(PI), glue("{PI} (PI)"), NA)
+    why = ifelse(!is.na(collab), glue("with {collab}"), NA)
+  )
+
+```
+
+```{r awarded grants}
+grants %>% 
+  detailed_entries(
+    when = date, 
+    what = title,
+    with = sponsor, 
+    where = dollar(amount),
+    # why =  ifelse(!is.na(PI), glue("{PI} (PI)"), NA)
+    why = ifelse(!is.na(collab), glue("with {collab}"), NA)
+  )
+```
+
+<!--chapter:end:../grants.Rmd-->
+
+# Awards & Honors
+```{r awards}
+awards <- read.csv(here("data", "awards.csv")) %>% 
+  arrange(desc(when))
+awards %>% 
+  brief_entries(when = when,
+                what = what,
+                with = where)
+```
+
+<!--chapter:end:../awards.Rmd-->
+
+# Publications
+
+<!-- ## Selected Publications
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+::: {#refs_selected}
+:::
+\endgroup -->
+
+## Refereed Journal Papers
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{1.0in}
+\setlength{\parskip}{8pt}
+
+::: {#refs_journals}
+:::
+\endgroup
+
+\vspace{12pt}
+
+## Papers in review
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{1.0in}
+\setlength{\parskip}{8pt}
+
+::: {#refs_inreview}
+:::
+\endgroup
+
+\vspace{12pt}
+
+## Papers in preparation
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{1.0in}
+\setlength{\parskip}{8pt}
+
+::: {#refs_inprep}
+:::
+\endgroup
+
+\vspace{12pt}
+
+## Other publications and reports
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{1.0in}
+\setlength{\parskip}{8pt}
+
+::: {#refs_reports}
+:::
+\endgroup
+
+\vspace{12pt}
+
+## Software
+```{r}
+df <- tribble(~what, ~when, ~with, ~where, ~why,
+              "dfoliatR: detection and analysis of insect defoliation signals in tree rings", 2020, "CH Guiterman, AM Lynch, JN Axelson",
+              "https://chguiterman.github.io/dfoliatR/", "Author, Creator, Maintainer",
+              "burnr: Advanced fire history tools in R", 2016, 
+              "SB Malevich, CH Guiterman, EQ Margolis",
+              "https://cran.r-project.org/web/packages/burnr/index.html",
+              "Author, Contributor",
+              "suRge: An extension of dfoliatR to accomodate insect-induced growth surges in trees", 2019, "developed for Amy Hessl (West Virginia University)", "https://github.com/chguiterman/suRge", "Author, Creator",
+              "slideRun: An extension of burnr to assess avalanche damage patterns on trees", 2018, "developed for Erich Peitzsch and Greg Pederson (USGS Montana)",
+              "https://github.com/chguiterman/slideRun", "Author, Creator",
+              "burnr_demo: A module-based R project for educating burnr users", 2017, "CH Guiterman", "https://github.com/chguiterman/burnr_demo", "Author, Creator"
+)
+df %>% 
+  detailed_entries(what = what, 
+                   when = when, 
+                   with = with, 
+                   where = where, 
+                   why = NULL)
+
+```
+
+<!--chapter:end:../publication.Rmd-->
+
+
+# Service
+
+\begingroup
+\setlength{\leftskip}{0.5in}
+
+**Journal peer reviews:** *Dendrochronologia,
+Fire Ecology,
+Forest Ecology and Management,
+Forest Science,
+Global Ecology and Biogeography,
+Geophysical Research Letters,
+International Journal of Wildland Fire,
+Journal of Archaeological Method and Theory,
+Journal of Biogeography,
+Journal of Contemporary Water Research and Education,
+Journal of Hydrology,
+Journal of Vegetation Science,
+Tree-Ring Research,
+Urban Forestry and Urban Greening*
+
+\endgroup
+
+\vspace{12pt}
+
+```{r}
+serv <- read.csv(here("data", "service.csv")) 
+serv %>% 
+  arrange(desc(when)) %>% 
+  detailed_entries(when = when,
+                   what = what,
+                   where = where)
+```
+
+<!--chapter:end:../service.Rmd-->
+
+
+# Presentations
+
+## Invited seminars
+```{r presentations}
+ presentations <- read_csv(here("data", "presentations.csv")) %>%  
+   mutate(When = mdy(When)) 
+
+presentations %>% 
+  filter(Tag == "seminar") %>% 
+  arrange(desc(When)) %>% 
+  detailed_entries(what = Title,
+                   when = glue("{month(When, label = TRUE)} {year(When)}"),
+                   where = glue("{Conference}, {Location}"), 
+                   .protect = TRUE)
+```
+
+## Conference presentations  (last five years)
+
+```{r}
+presentations %>%
+  filter(Tag %in% c("talk", "invited")) %>%
+  arrange(desc(When)) %>%
+  detailed_entries(what = Title,
+                   when = glue("{month(When, label = TRUE)} {year(When)}"),
+                   with = Authors,
+                   where = glue("{Conference}, {Location}"), 
+                   why = Why, 
+                   .protect = FALSE)
+```
+
+<!-- ## Conference posters (last five years) -->
+<!-- ``` {r} -->
+<!-- presentations %>% -->
+<!--   filter(Tag == "poster") %>% -->
+<!--   arrange(desc(When)) %>% -->
+<!--   detailed_entries(what = Title, -->
+<!--                    when = glue("{month(When, label = TRUE)} {year(When)}"), -->
+<!--                    with = Authors, -->
+<!--                    where = glue("{Conference}, {Location}"),  -->
+<!--                    why = Why,  -->
+<!--                    .protect = FALSE) -->
+<!-- ```                    -->
+
+<!--chapter:end:../presentations.Rmd-->
+
+# Professional Society Memberships
+
+|           * Tree-Ring Society
+|           * Forest Stewards Guild
+|           * Society of American Foresters
+|           * Association for Fire Ecology
+|           * Association of American Geographers
+|           * Society of American Archaeology
+  
+\vspace{12pt}
+
+<!--chapter:end:../memberships.Rmd-->
+
+# Student Research Assistants & Mentees
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{1.0in}
+<!-- \setlength{\parskip}{8pt} -->
+
+**Eze Ahanonu**, undergraduate, field and lab (2014-2016)
+
+**Royale Billy-Wilson**, undergraduate, field and lab (2015-2017)
+
+**Patrick Brewer**, undergraduate, field and lab (2015-2016)
+
+
+**Alec Gagliano**, undergraduate, field and lab (2016-2018)
+
+**Galen Gudenkauf**, undergraduate, field (2014)
+
+**Jordan Krcmaric**, post-graduate, field (2017)
+
+**Ben Olimpio**, undergraduate, lab (2016-2017)
+
+**Anna Penaloza**, undergraduate, lab (2013)
+
+**Gabryl Sam**, post-graduate, field (2019)
+
+**Melissa Schwan**, undergraduate and post-graduate, field and lab (2015-2018)
+
+**Eric Shreve**, undergraduate, lab (2012-2013)
+
+**Jaime Yazzie**, post-graduate, field (2019)
+
+
+\endgroup
+
+\vspace{12pt}
+
+<!--chapter:end:../lab_group.Rmd-->
+

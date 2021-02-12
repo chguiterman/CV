@@ -1,0 +1,653 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% Adapted to be an Rmarkdown template by Mitchell O'Hara-Wild
+% 8 February 2019
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,]{moderncv}
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+
+\definecolor{color0}{rgb}{0,0,0}% black
+\definecolor{color1}{HTML}{00008B}% custom
+\definecolor{color2}{rgb}{0.45,0.45,0.45}% dark grey
+
+\usepackage[scaled=0.86]{DejaVuSansMono}
+
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\def\donothing#1{#1}
+\def\emaillink#1{#1}
+
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75,footskip=60pt]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+
+
+% personal data
+\name{Chris}{Guiterman}
+
+\address{Laboratory of Tree-Ring Research, University of Arizona
+\tabularnewline Permanent residence: Hanover, New Hampshire
+\tabularnewline}{}{}
+\phone[mobile]{+1 781-296-3667} % Phone number
+\email{\donothing{\href{mailto:chguiterman@arizona.edu}{\nolinkurl{chguiterman@arizona.edu}}}}
+\homepage{chris-guiterman.rbind.io} % Personal website
+
+\social[twitter]{ChrisGuiterman}
+\social[github]{chguiterman}
+% \extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+
+
+
+\quote{Forest and fire ecology \textbar{} Climate change \textbar{}
+Coupled human-natural systems \textbar{} Applications in
+dendrochronology}
+
+% Pandoc CSL macros
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+
+
+\hypertarget{education}{%
+\section{Education}\label{education}}
+
+\nopagebreak
+    \cvitem{2016}{Ph.D. University of Arizona, School of Natural Resources and the Environment, Tucson, AZ}
+    \cvitem{2009}{M.S. University of Maine, Orono, School of Forest Resources, Orono, ME}
+    \cvitem{2005}{B.A. Bates College, Geology (with honors), Lewiston, ME}
+
+\hypertarget{work-experience}{%
+\section{Work Experience}\label{work-experience}}
+
+\nopagebreak
+    \cvitem{2017--    }{Assistant Research Scientist. Laboratory of Tree-Ring Research, University of Arizona, Tucson, AZ}
+    \cvitem{2010--2016}{Graduate Research Associate; Course Instructor; Teaching Assistant. University of Arizona, Tucson, AZ}
+    \cvitem{2007--2009}{Graduate Research Assistant; Teaching Assistant. University of Maine, Orono, ME}
+    \cvitem{2005--2007}{Forest Inventory Specialist (FIA, CVS, timber cruises). Camp II Forest Management, Joseph, OR}
+
+\hypertarget{teaching-experience}{%
+\section{Teaching Experience}\label{teaching-experience}}
+
+\hypertarget{lead-or-co-instructor}{%
+\subsection{Lead or co-instructor}\label{lead-or-co-instructor}}
+
+\nopagebreak
+    \cventry{Sum. 2019}{Dendrochronology Intensive Summer Course (DISC)}{Laboratory of Tree-Ring Research, University of Arizona}{}{}{\begin{itemize}%
+\item A three-week hands-on course covering the essentials of dendrochronology from fieldwork and lab processing to analyses and interpretation%
+\end{itemize}}
+    \cventry{Spr. 2014}{Field Study in Environmental Geography (303)}{School of Geography and Development, University of Arizona}{}{}{\begin{itemize}%
+\item A semester-long field-based course on environmental data collection, interpretation, and presentation%
+\end{itemize}}
+    \cventry{Sum. 2013}{Our Changing Climate (Online; 230)}{School of Geography and Development, University of Arizona}{}{}{\begin{itemize}%
+\item A five-week intensive online course covering the causes and consequences of anthropogenic climate change%
+\end{itemize}}
+    \cventry{Win. 2013}{Our Changing Climate (Online; 230)}{School of Geography and Development, University of Arizona}{}{}{\begin{itemize}%
+\item A three-week intensive online course covering the causes and consequences of anthropogenic climate change%
+\end{itemize}}
+    \cventry{Sum. 2012}{North American Dendroecological Fieldweek (NADEF)}{Intro group, Jemez Mountains, New Mexico}{}{}{\begin{itemize}%
+\item A ten-day intensive overview of dendrochronology%
+\end{itemize}}
+    \cventry{Sum. 2011}{Dendroecology Fieldcourse (497/597)}{Laboratory of Tree-Ring Research, University of Arizona}{}{}{\begin{itemize}%
+\item A three-week hands-on course covering the essentials of dendrochronology from fieldwork and lab processing to analyses and interpretation%
+\end{itemize}}
+    \cventry{Fall 2011}{Field Course -- Reading a Landscape (397)}{School of Geography and Development, University of Arizona}{}{}{\begin{itemize}%
+\item A half-semester course offering readings-based discussions and a two-night fieldtrip to the Chiricahua Mountains in southern Arizona%
+\end{itemize}}
+    \cventry{Fall 2011}{Our Dynamic Landscape (240)}{School of Geography and Development, University of Arizona}{}{}{\begin{itemize}%
+\item A semester-long survey course covering environmental processes (e.g., plate tectonics), human impacts on ecosystems (e.g., land-use change), and climate change%
+\end{itemize}}
+
+\hypertarget{teaching-assistant}{%
+\subsection{Teaching assistant}\label{teaching-assistant}}
+
+\nopagebreak
+    \cvitem{Fall 2010}{Physical Geography (101). School of Geography and Development, University of Arizona}
+    \cvitem{Sum. 2009}{Forestry Summer Field Experience (300). School of Forest Resources, University of Maine}
+    \cvitem{Sum. 2008}{Forestry Summer Field Experience (300). School of Forest Resources, University of Maine}
+    \cvitem{Fall 2003}{Structural Geology (230). Geology Department, Bates College}
+
+\hypertarget{grants-fellowships}{%
+\section{Grants \& Fellowships}\label{grants-fellowships}}
+
+Total research funding: \$1,003,666
+
+\emph{Note: I served as the project lead and/or PI unless otherwise
+specified}
+
+\vspace{12pt}
+
+\nopagebreak
+    \cventry{Submitted}{Feedbacks and scale at an ancient wildland-urban interface}{NSF Dynamics of Integrated Socio-Environmental Systems}{\$1,599,949}{}{\begin{itemize}%
+\item with Chris Roos (PI). UofA (Guiterman co-PI) share \$362,117.%
+\end{itemize}}
+    \cventry{Invited, second round}{rIMPD: The North American tree-ring fire history database in R}{USGS Community for Data Integration}{\$50,000}{}{\begin{itemize}%
+\item with Ellis Margolis%
+\end{itemize}}
+
+\nopagebreak
+    \cventry{2021--2023}{Resilience in a longleaf savanna: Historical tree recruitment in response to frequent disturbance and climate variability}{Wade Research Foundation}{\$75,000}{}{\begin{itemize}%
+\item with Monica Rother%
+\end{itemize}}
+    \cventry{2019--2021}{Integrated watershed hazard assessment for wildfire, floods, and debris flows on the Navajo Nation}{BIA Tribal Resilience Program}{\$150,000}{}{\begin{itemize}%
+\item with Ann Youberg%
+\end{itemize}}
+    \cventry{2020--2021}{Designing climate adaptation plans for the forests of the Navajo Nation}{Southwest Climate Adaptation Science Center}{\$225,328}{}{\begin{itemize}%
+\item with Margaret Evans (PI) and Justin DeRose%
+\end{itemize}}
+    \cventry{2020--2021}{A grove of stories: Dendrochronology of the Wheatfields Lake peel-tree grove on the Navajo Nation}{University of Arizona Foundation Small Grants Program}{\$20,000}{}{\begin{itemize}%
+\item with William Tsosie (Navajo Heritage and Historic Preservation Department)%
+\end{itemize}}
+    \cventry{2017--2018}{Dendrochronology study for Wupakti Residence 1 viga preservation}{National Park Service, Wupakti National Monument}{\$14,377}{}{\begin{itemize}%
+\item with Ron Towner (PI)%
+\end{itemize}}
+    \cventry{2017--2018}{Sourcing construction timbers at Aztec Ruins National Monument}{Western National Parks Association. Grant \#17-01}{\$7,400}{}{\begin{itemize}%
+\item with Ron Towner (PI)%
+\end{itemize}}
+    \cventry{2017--2018}{Ancient trees and global change: A vulnerability assessment of old-growth forests on the Navajo Nation}{BIA Tribal Climate Resilience Program}{\$216,694}{}{\begin{itemize}%
+\item with Ellis Margolis, Craig Allen, and Alex Becenti%
+\end{itemize}}
+    \cventry{2015--2017}{Climate drivers of tree growth across Navajo Forestlands: Incorporating dendrochronology into Continuous Forest Inventory to improve management strategies for a future climate}{Navajo Nation}{\$99,632}{}{\begin{itemize}%
+\item with Ellis Margolis and Thomas Swetnam%
+\end{itemize}}
+    \cventry{2014--2016}{Fire regimes, demography, and climatic sensitivities of Navajo forestlands: Insights from the past to inform tribal forest management}{EPA STAR Fellowship \# F13F51318}{\$84,000}{}{\empty}
+    \cventry{2013--2015}{Forest-to-shrub type conversions: climate-disturbance interactions in the southwestern U.S.}{USGS Cooperative Agreement G13AC00247}{\$53,000}{}{\begin{itemize}%
+\item with Ellis Margolis (PI) and Craig Allen%
+\end{itemize}}
+    \cventry{2014--2015}{Climatic sensitivities of Navajo forestlands: Use-inspired research to guide tribal forest management}{Climate Assessment of the Southwest (CLIMAS) Fellowship, University of Arizona}{\$5,000}{}{\empty}
+    \cventry{2012--2014}{Dendrochronological sourcing of timbers from the Great Houses of Chaco Canyon, New Mexico}{Bandelier National Monument, Desert Southwest CESU. \#UAZDS-381}{\$10,735}{}{\begin{itemize}%
+\item with Thomas Swetnam, Jeffrey Dean, and Craig Allen%
+\end{itemize}}
+    \cventry{2013--2014}{Dendroecological analyses of fire-origin shrublands in former conifer forests of the Jemez Mountains, New Mexico}{Bandelier National Monument, Desert Southwest CESU \#UAZDS-402}{\$35,000}{}{\begin{itemize}%
+\item with Ellis Margolis, Thomas Swetnam, and Craig Allen%
+\end{itemize}}
+    \cventry{2012--2013}{Dendrochronological sourcing of timbers from the Great Houses of Chaco Canyon, New Mexico}{Western National Parks Association. Grant \#13-02}{\$7,500}{}{\begin{itemize}%
+\item with Thomas Swetnam, Jeffrey Dean, and Pearce Paul Creasman%
+\end{itemize}}
+    \cventry{2012}{Conference travel grant}{University of Arizona Graduate and Professional Student Council}{\$500}{}{\empty}
+
+\hypertarget{awards-honors}{%
+\section{Awards \& Honors}\label{awards-honors}}
+
+\nopagebreak
+    \cvitem{2018}{Young Forester of the Year. Southwestern Section of the Society of American Foresters}
+    \cvitem{2016}{College of Science Scholarship. University of Arizona}
+    \cvitem{2016}{William G. McGinnies Graduate Scholarship in Arid Land Studies. School of Natural Resources \& the Environment, University of Arizona}
+    \cvitem{2015}{Galileo Circle Scholar. College of Science, University of Arizona}
+    \cvitem{2014}{Best presentation, School of Earth and Environmental Sciences (SEES) Earthweek competitive plenary session. University of Arizona}
+    \cvitem{2014}{Andrew Ellicott Douglass Memorial Scholarship. Laboratory of Tree-Ring Research, University of Arizona}
+    \cvitem{2011}{Graduate College Fellowship. University of Arizona}
+    \cvitem{2009}{Phi Kappa Phi Honor Society. University of Maine}
+    \cvitem{2009}{Best Poster Presentation Award. Northeast Society of American Foresters (SAF) Conference Portland, Maine}
+    \cvitem{2008}{Golden Key International Honor Society. University of Maine}
+    \cvitem{2008}{Charles E. Schomaker Memorial Scholarship. School of Forest Resources, University of Maine}
+    \cvitem{2004}{Sigma Xi Honor Society. Bates College}
+
+\hypertarget{publications}{%
+\section{Publications}\label{publications}}
+
+\hypertarget{refereed-journal-papers}{%
+\subsection{Refereed Journal Papers}\label{refereed-journal-papers}}
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{1.0in}
+\setlength{\parskip}{8pt}
+
+\hypertarget{refs_journals}{}
+\leavevmode\hypertarget{ref-Roospnas}{}%
+Roos, C. I., Swetnam, T. W., Ferguson, T. J., Liebmann, M. J., Loehman,
+R. A., Welch, J. R., Margolis, E. Q., \textbf{Guiterman, C. H.},
+Hockaday, W. C., Aiuvalasit, M. J., Battillo, J., Farella, J.,
+Kiahtipes, C. A., Toya, C., \& Tosa, C. (2021). Native American fire
+management at an ancient wildland-urban interface in the Southwest US.
+\emph{Proceedings of the National Academies of Sciences}. In press.
+
+\leavevmode\hypertarget{ref-Guiterman2020a}{}%
+\textbf{Guiterman, C. H.}, Baisan, C. H., English, N. B., Quade, J.,
+Dean, J. S., \& Swetnam, T. W. (2020). Convergence of Evidence Supports
+a Chuska Mountains Origin for the Plaza Tree of Pueblo Bonito, Chaco
+Canyon. \emph{American Antiquity}, \emph{85}(2), 331--346.
+\url{https://doi.org/10.1017/aaq.2020.6}
+
+\leavevmode\hypertarget{ref-Guiterman2020}{}%
+\textbf{Guiterman, C. H.}, Lynch, A. M., \& Axelson, J. N. (2020).
+\texttt{dfoliatR}: An R package for detection and analysis of insect
+defoliation signals in tree rings. \emph{Dendrochronologia}, \emph{63},
+125750. \url{https://doi.org/10.1016/j.dendro.2020.125750}
+
+\leavevmode\hypertarget{ref-Klesse2020}{}%
+Klesse, S., DeRose, R. J., Babst, F., Black, B. A., Anderegg, L. D. L.,
+Axelson, J., Ettinger, A., Griesbauer, H., \textbf{Guiterman, C. H.},
+Harley, G., Harvey, J. E., Lo, Y. H., Lynch, A. M., O'Connor, C.,
+Restaino, C., Sauchyn, D., Shaw, J. D., Smith, D. J., Wood, L.,
+Villanueva-Díaz, J., \& Evans, M. E. K. (2020). Continental-scale
+tree-ring-based projection of Douglas-fir growth: Testing the limits of
+space-for-time substitution. \emph{Global Change Biology}, \emph{26}(9),
+5146--5163. \url{https://doi.org/10.1111/gcb.15170}
+
+\leavevmode\hypertarget{ref-Rother2020}{}%
+Rother, M. T., Huffman, J. M., \textbf{Guiterman, C. H.}, Robertson, K.
+M., \& Jones, N. (2020). A history of recurrent, low-severity fire
+without fire exclusion in southeastern pine savannas, USA. \emph{Forest
+Ecology and Management}, \emph{475}, 118406.
+\url{https://doi.org/10.1016/j.foreco.2020.118406}
+
+\leavevmode\hypertarget{ref-Guiterman2019}{}%
+\textbf{Guiterman, C. H.}, Margolis, E. Q., Baisan, C. H., Falk, D. A.,
+Allen, C. D., \& Swetnam, T. W. (2019). Spatiotemporal variability of
+human -- fire interactions on the Navajo Nation. \emph{Ecosphere},
+\emph{10}(11), e02932. \url{https://doi.org/10.1002/ecs2.2932}
+
+\leavevmode\hypertarget{ref-Evans2018}{}%
+Evans, M. E. K., Gugger, P. F., Lynch, A. M., \textbf{Guiterman, C.H.},
+Fowler, J. C., Klesse, S., \& Riordan, E. C. (2018). Dendroecology meets
+genomics in the common garden: new insights into climate adaptation.
+\emph{New Phytologist}, \emph{218}(2).
+\url{https://doi.org/10.1111/nph.15094}
+
+\leavevmode\hypertarget{ref-Guiterman2018}{}%
+\textbf{Guiterman, C. H.}, Margolis, E. Q., Allen, C. D., Falk, D. A.,
+\& Swetnam, T. W. (2018). Long-Term Persistence and Fire Resilience of
+Oak Shrubfields in Dry Conifer Forests of Northern New Mexico.
+\emph{Ecosystems}, \emph{21}(5), 943--959.
+\url{https://doi.org/10.1007/s10021-017-0192-2}
+
+\leavevmode\hypertarget{ref-Klesse2018}{}%
+Klesse, S., DeRose, R. J., \textbf{Guiterman, C. H.}, Lynch, A. M.,
+O'Connor, C. D., Shaw, J. D., \& Evans, M. E. K. (2018). Sampling bias
+overestimates climate change impacts on forest growth in the
+southwestern United States. \emph{Nature Communications}, \emph{9}(1),
+5336. \url{https://doi.org/10.1038/s41467-018-07800-y}
+
+\leavevmode\hypertarget{ref-Malevich2018}{}%
+Malevich, S. B., \textbf{Guiterman, C. H.}, \& Margolis, E. Q. (2018).
+\texttt{burnr}: Fire history analysis and graphics in R.
+\emph{Dendrochronologia}, \emph{49}(February), 9--15.
+\url{https://doi.org/10.1016/j.dendro.2018.02.005}
+
+\leavevmode\hypertarget{ref-Betancourt2016}{}%
+Betancourt, J. L., \& \textbf{Guiterman, C. H.} (2016). Revisiting
+human-environment interactions in Chaco Canyon and the American
+Southwest. \emph{Past Global Change Magazine}, \emph{24}(2), 64--65.
+\url{https://doi.org/10.22498/pages.24.2.64}
+
+\leavevmode\hypertarget{ref-Brewer2016}{}%
+Brewer, P. W., \& \textbf{Guiterman, C. H.} (2016). A new digital field
+data collection system for dendrochronology. \emph{Dendrochronologia},
+\emph{38}, 131--135. \url{https://doi.org/10.1016/j.dendro.2016.04.005}
+
+\leavevmode\hypertarget{ref-Guiterman2016}{}%
+\textbf{Guiterman, C. H.}, Swetnam, T. W., \& Dean, J. S. (2016).
+Eleventh-century shift in timber procurement areas for the great houses
+of Chaco Canyon. \emph{Proceedings of the National Academy of Sciences},
+\emph{113}(5), 1186--1190. \url{https://doi.org/10.1073/pnas.1514272112}
+
+\leavevmode\hypertarget{ref-Creasman2014}{}%
+Creasman, P. P., Baisan, C. H., \& \textbf{Guiterman, C. H.} (2015).
+Dendrochronological Evaluation of Ship Timber from Charlestown Navy Yard
+(Boston, MA). \emph{Dendrochronologia}, \emph{33}, 8--15.
+\url{https://doi.org/10.1016/j.dendro.2014.10.001}
+
+\leavevmode\hypertarget{ref-Guiterman2015}{}%
+\textbf{Guiterman, C. H.}, Margolis, E. Q., \& Swetnam, T. W. (2015).
+Dendroecological methods for reconstructing high severity fire in
+pine-oak forests. \emph{Tree-Ring Research}, \emph{71}(2), 67--77.
+\url{https://doi.org/10.3959/1536-1098-71.2.67}
+
+\leavevmode\hypertarget{ref-Brice2013}{}%
+Brice, B., Lorion, K. K., Griffin, D., Macalady, A. K.,
+\textbf{Guiterman, C. H.}, Speer, J. H., Benakoun, L. R., Cutter, A.,
+Hart, M. E., Murray, M. P., Nash, S. E., Shepard, R., Stewart, A. K., \&
+Wang, H. (2013). Signal Strength In Sub-Annual Tree-Ring Chronologies
+from Pinus ponderosa In Northern New Mexico. \emph{Tree-Ring Research},
+\emph{69}(2), 81--86. \url{https://doi.org/10.3959/1536-1098-69.2.81}
+
+\leavevmode\hypertarget{ref-Guiterman2012}{}%
+\textbf{Guiterman, C.H.}, Seymour, R. S., \& Weiskittel, A. R. (2012).
+Long-Term Thinning Effects on the Leaf Area of Pinus strobus L. as
+Estimated from Litterfall and Individual-Tree Allometric Models.
+\emph{Forest Science}, \emph{58}(1), 85--93.
+\url{https://doi.org/10.5849/forsci.10-002}
+
+\leavevmode\hypertarget{ref-Guiterman2011}{}%
+\textbf{Guiterman, C. H.}, Weiskittel, A. R., \& Seymour, R. S. (2011).
+Influences of Conventional and Low-Density Thinning on the Lower Bole
+Taper and Volume Growth of Eastern White Pine. \emph{Northern Journal of
+Applied Forestry}, \emph{28}(3), 123--128.
+\url{https://doi.org/10.1093/njaf/28.3.123}
+
+\endgroup
+
+\vspace{12pt}
+
+\hypertarget{papers-in-review}{%
+\subsection{Papers in review}\label{papers-in-review}}
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{1.0in}
+\setlength{\parskip}{8pt}
+
+\hypertarget{refs_inreview}{}
+\leavevmode\hypertarget{ref-Briceclimateservices}{}%
+Brice, B., \textbf{Guiterman, C. H.}, Woodhouse, C., McClellan, C., \&
+Sheppard, P. R. (in revision). Comparing tree-ring based reconstructions
+of snowpack variability for the Navajo Nation. \emph{Climate Services}.
+
+\leavevmode\hypertarget{ref-Roosholocene}{}%
+Roos, C. I., \& \textbf{Guiterman, C. H.} (in revision). Dating the
+origins of persistent oak shrubfields in northern New Mexico using soil
+charcoal and dendrochronology. \emph{The Holocene}.
+
+\endgroup
+
+\vspace{12pt}
+
+\hypertarget{papers-in-preparation}{%
+\subsection{Papers in preparation}\label{papers-in-preparation}}
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{1.0in}
+\setlength{\parskip}{8pt}
+
+\hypertarget{refs_inprep}{}
+\leavevmode\hypertarget{ref-BigioBuryatia}{}%
+Bigio, E. R., \textbf{Guiterman, C. H.}, Baisan, C. H., \& Swetnam, T.
+W. (in prep). The influence of drought and human land-use on historical
+fire regimes of Buryatia, Siberia. \emph{Ecological Research Letters}.
+
+\leavevmode\hypertarget{ref-FalkTAMM}{}%
+Falk, D. A., Mantgem, P. J. van, Keeley, J. E., Gregg, R.,
+\textbf{Guiterman, C. H.}, Marshall, L. A., Tepley, A. J., \& Young, D.
+J. (in prep). Tamm Review: Mechanisms of forest resilience. \emph{Forest
+Ecology and Management}.
+
+\leavevmode\hypertarget{ref-GuitermanFEM}{}%
+\textbf{Guiterman, C. H.}, Gregg, R., Marshall, L. A., Falk, D. A.,
+Mantgem, P. J. van, Keeley, J. E., Beckman, J., Allen, C. D., Stevens,
+J., Fornwalt, P., \& Ostoja, S. (in prep). Vegetation type conversions
+in the US Southwest: Field observations and perspectives from fire and
+vegetation managers. \emph{Forest Ecology and Management}.
+
+\leavevmode\hypertarget{ref-LynchWSBW}{}%
+Lynch, A. M., \textbf{Guiterman, C. H.}, \& Axelson, J. N. (in prep).
+Abruptness of western spruce budworm outbreaks in Colorado and New
+Mexico. \emph{Canadian Journal of Forest Research}.
+
+\leavevmode\hypertarget{ref-MargolisNAFSS}{}%
+Margolis, E. Q., \textbf{Guiterman, C. H.}, \& over 100 co-authors. (in
+prep). The North American tree-ring fire scar network.
+\emph{Bioscience}.
+
+\endgroup
+
+\vspace{12pt}
+
+\hypertarget{other-publications-and-reports}{%
+\subsection{Other publications and
+reports}\label{other-publications-and-reports}}
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{1.0in}
+\setlength{\parskip}{8pt}
+
+\hypertarget{refs_reports}{}
+\leavevmode\hypertarget{ref-ChacoSWMag}{}%
+\textbf{Guiterman, C. H.}, \& Baisan, C. H. (2019). The origins of great
+house construction timbers at Chaco Canyon. \emph{Southwest Archaeology
+Magazine}. Retrieved from
+\url{https://www.archaeologysouthwest.org/product/asw32-3/}
+
+\leavevmode\hypertarget{ref-NavajoVulnerabilities}{}%
+\textbf{Guiterman, C. H.}, \& Margolis, E. Q. (2019).
+\emph{Vulnerabilities of Navajo Nation Forests to Climate Change}.
+Retrieved from \url{https://chguiterman.github.io/Nav_report/}
+
+\leavevmode\hypertarget{ref-Eusden}{}%
+Eusden, J., Anderson, B., Castro, C., Gardner, P., \textbf{Guiterman,
+C.}, Higgens, S., Kugel, K., C., R., \& Tamposi, C. (2017). Bedrock
+Geology of Mt. Washington, Presidential Range, NH. In B. Johnson \& J.
+Eusden (Eds.), \emph{Guidebook for Field Trips in Western Maine and
+Northern New Hampshire: New England Intercollegiate Geological
+Conference} (pp. 177--196). Bates College.
+
+\leavevmode\hypertarget{ref-NavajoClimateSensitivity}{}%
+\textbf{Guiterman, C. H.} (2015). \emph{Climatic sensitivities of Navajo
+forestlands: use-inspired research to guide tribal forest management}.
+Final report for Climate \& Society Fellowship, Climte Assessment of the
+Southwest.
+
+\leavevmode\hypertarget{ref-Shrubfields}{}%
+\textbf{Guiterman, C. H.}, Margolis, E. Q., \& Swetnam, T. W. (2015).
+\emph{Dendroecological analyses of fire-origin shrublands in former
+conifer forests of the Jemez Mountains, New Mexico}. Final report to NPS
+Bandelier National Monument (DS CESU project UAZDS-402). Laboratory of
+Tree-Ring Research, University of Arizona, Tucson, AZ.
+
+\leavevmode\hypertarget{ref-ChacoReport}{}%
+\textbf{Guiterman, C. H.}, Swetnam, T. W., Dean, J. S., \& Creasman, P.
+P. (2014). \emph{Dendrochronological sourcing of timbers from the Great
+Houses of Chaco Canyon, New Mexico} (p. 25). Final report to Chaco
+Culture National Historical Park and Western National Parks Association
+(WNPA Grant 13-02). Laboratory of Tree-Ring Research, University of
+Arizona, Tucson, AZ.
+
+\endgroup
+
+\vspace{12pt}
+
+\hypertarget{software}{%
+\subsection{Software}\label{software}}
+
+\nopagebreak
+    \cventry{2020}{dfoliatR: detection and analysis of insect defoliation signals in tree rings}{CH Guiterman, AM Lynch, JN Axelson}{https://chguiterman.github.io/dfoliatR/}{}{\empty}
+    \cventry{2016}{burnr: Advanced fire history tools in R}{SB Malevich, CH Guiterman, EQ Margolis}{https://cran.r-project.org/web/packages/burnr/index.html}{}{\empty}
+    \cventry{2019}{suRge: An extension of dfoliatR to accomodate insect-induced growth surges in trees}{developed for Amy Hessl (West Virginia University)}{https://github.com/chguiterman/suRge}{}{\empty}
+    \cventry{2018}{slideRun: An extension of burnr to assess avalanche damage patterns on trees}{developed for Erich Peitzsch and Greg Pederson (USGS Montana)}{https://github.com/chguiterman/slideRun}{}{\empty}
+    \cventry{2017}{burnr\_demo: A module-based R project for educating burnr users}{CH Guiterman}{https://github.com/chguiterman/burnr\_demo}{}{\empty}
+
+\hypertarget{service}{%
+\section{Service}\label{service}}
+
+\begingroup
+\setlength{\leftskip}{0.5in}
+
+\textbf{Journal peer reviews:} \emph{Dendrochronologia, Fire Ecology,
+Forest Ecology and Management, Forest Science, Global Ecology and
+Biogeography, Geophysical Research Letters, International Journal of
+Wildland Fire, Journal of Archaeological Method and Theory, Journal of
+Biogeography, Journal of Contemporary Water Research and Education,
+Journal of Hydrology, Journal of Vegetation Science, Tree-Ring Research,
+Urban Forestry and Urban Greening}
+
+\endgroup
+
+\vspace{12pt}
+
+\nopagebreak
+    \cventry{2019}{Conference review committee}{}{8th International Fire Ecology and Management Conference, Association for Fire Ecologist, Tucson, AZ, November 18-22, 2019}{}{\empty}
+    \cventry{2019}{Conference organizer}{}{Healthy Forests-Healthy Watersheds: Enabling a Cultural Shift Toward Understanding the Beneficial Aspects of Forest Fire in a Changing Climate. November 13-15, 2019. Tucson, AZ}{}{\empty}
+    \cventry{2018}{Conference organizing committee}{}{Society of American Foresters Southwest Section Meeting, Safford, AZ, April 19-21, 2018}{}{\empty}
+    \cventry{2018}{Education Chair}{}{Southwest Section of the Society of American Foresters}{}{\empty}
+    \cventry{2017}{Grant proposal reviewer}{}{National Geographic Society}{}{\empty}
+    \cventry{2015}{Session Chair (de facto), Resource use, Environments, and Landscapes}{}{Society of American Archaeology Conference, April 15-18, 2015, San Francisco, CA}{}{\empty}
+    \cventry{2015}{Contributor, Chaco Research Archive. Chaco great house tree-ring database. 6,421 records}{}{http://www.chacoarchive.org/cra/chaco-resources/tree-ring-database/}{}{\empty}
+    \cventry{2015}{Open Data contributor, International Tree-Ring Databank}{}{NM588, Canyon del Potrero (Ponderosa pine) AD 620-2011, NM589, Narbona Pass (Ponderosa pine) AD 842-2010}{}{\empty}
+    \cventry{2015}{Invited session co-chair, Collaborative environmental research in the Southwest: Examples from the field}{}{13th Biennial Conference on Science and Management on the Colorado Plateau and Southwest Region. October 5-8, 2015, Flagstaff, AZ}{}{\empty}
+    \cventry{2014}{Fellowship proposal reviewer and selection committee member }{}{CLIMAS Climate \& Society Fellowships, University of Arizona}{}{\empty}
+    \cventry{2014}{Search committee member, Laboratory of Tree-Ring Research Director position}{}{University of Arizona}{}{\empty}
+    \cventry{2013}{Organizer, Tree-Ring Day}{}{SEES Earthweek}{}{\empty}
+    \cventry{2012}{Science advisory committee, Forests, Fire, and Tree Ring displays}{}{Flandrau Science Center museum exhibit on Sky Islands}{}{\empty}
+    \cventry{2012}{Representative to University of Arizona School of Earth and Environmental Sciences (SEES) Earthweek}{}{2012-2013 academic year}{}{\empty}
+    \cventry{2012}{Graduate student faculty representative, Laboratory of Tree-Ring Research}{}{2012-2013 academic year}{}{\empty}
+    \cventry{2011}{Interim Treasurer}{}{Southern Arizona Chapter of the Society of American Foresters}{}{\empty}
+
+\hypertarget{presentations}{%
+\section{Presentations}\label{presentations}}
+
+\hypertarget{invited-seminars}{%
+\subsection{Invited seminars}\label{invited-seminars}}
+
+\nopagebreak
+    \cventry{Sep 2020}{dfoliatR empowers analyses of forest defoliator outbreak chronologies}{}{Laboratory of Tree-Ring Research seminar series, via Zoom}{}{\empty}
+    \cventry{Mar 2020}{Unearthing the story of JPB-99, the Plaza Tree of Pueblo Bonito}{}{Laboratory of Tree-Ring Research seminar series, via Zoom}{}{\empty}
+    \cventry{Feb 2018}{Shifting timber sources signal socioecological change at the descendant Chacoan cultural center, Aztec Ruins, New Mexico}{}{Laboratory of Tree-Ring Research seminar series, Tucson, AZ}{}{\empty}
+    \cventry{Nov 2017}{On the vulnerabilities of Navajo forests to climate change}{}{Navajo Nation Department of Natural Resources Annual Summit, Twin Arrows Casino, AZ}{}{\empty}
+    \cventry{Nov 2017}{Timber procurement patterns of the Aztec great houses}{}{Aztec Ruins National Monument, New Mexico, NA}{}{\empty}
+    \cventry{Mar 2017}{Ancient origins for construction timbers of the Chacoan world (850-1240 CE)}{}{US Geological Survey seminar series, Tucson, AZ}{}{\empty}
+    \cventry{May 2016}{Landscape-scale variability in forest response to climate, Navajo Nation, US Southwest}{}{William G. McGinnies Graduate Scholarship in Arid Land Studies annual lecture, Tucson, AZ}{}{\empty}
+    \cventry{Mar 2016}{Persistence and fire regimes of oak shrubfields suggest increasing dominance with climate change}{}{Southwest Fire Science Consortium Webinar, NA}{}{\empty}
+    \cventry{Mar 2015}{Distant and shifting sources of Chaco timbers}{}{Tucson Festival of Books, Tucson, AZ}{}{\empty}
+    \cventry{Oct 2014}{An integrated field data collection system for dendrochronology}{}{Laboratory of Tree-Ring Research seminar series, Tucson, AZ}{}{\empty}
+    \cventry{Apr 2014}{Dendrochronological sourcing of timbers from the Great Houses of Chaco Canyon, New Mexico}{}{Laboratory of Tree-Ring Research seminar series, Tucson, AZ}{}{\empty}
+    \cventry{Mar 2014}{The Beams of Chaco Culture: Unraveling an ancient environment in the Southwest}{}{Tucson Festival of Books, Tucson, AZ}{}{\empty}
+    \cventry{Sep 2013}{Dendrochronological sourcing of timbers from the Great Houses of Chaco Canyon}{}{Visitors Center, Chaco Culture National Historical Park, NA}{}{\empty}
+    \cventry{Mar 2013}{Tree-ring research and chronology building in the Chuska Mountains of the Navajo Nation}{}{Navajo Forestry Department, Ft Defiance, AZ}{}{\empty}
+    \cventry{Apr 2012}{Three seasons of FIA adventures in the Pacific Northwest}{}{Southern Arizona Chapter of the Society of American Foresters, Tucson, AZ}{}{\empty}
+
+\hypertarget{conference-presentations-last-five-years}{%
+\subsection{Conference presentations (last five
+years)}\label{conference-presentations-last-five-years}}
+
+\nopagebreak
+    \cventry{Dec 2020}{Fire and climate in the eastern Siberia over the past 500 years (1500-2010 CE)}{Xu, G., Guiterman, C., Swetnam, T., Trouet, V., Anchukaitis, K., and Baisan, C.}{AGU Fall Meeting, Online}{}{\empty}
+    \cventry{Aug 2020}{Modern area burned in a historical context in the Jemez Mountains, New Mexico}{Margolis, E., C. Farris, C. D. Allen, L. Johnson, D. Falk, T. Swetnam, and C. Guiterman}{ESA Virtual Meeting, Online}{}{\empty}
+    \cventry{Nov 2019}{Modern area burned in a historical context in the Jemez Mountains, New Mexico}{Margolis, E., C. Farris, C. D. Allen, L. Johnson, D. Falk, T. Swetnam, and C. Guiterman}{8th International Fire Ecology and Management Congress, Tucson, AZ}{}{\empty}
+    \cventry{Nov 2019}{Variable trajectories of Southwest ponderosa pine forests following high-severity fire}{Iniguez, J., C. Guiterman, E. Margolis, C. Haffey, D. Carril}{8th International Fire Ecology and Management Congress, Tucson, AZ}{}{\empty}
+    \cventry{Nov 2019}{A synthesis of fire regimes in the southwestern United States}{Guiterman, C., S. Malevich, E. Margolis, C. Baisan, E. Bigio, P. Brown, D. Falk, P. Fulé, and T. Swetnam}{8th International Fire Ecology and Management Congress, Tucson, AZ}{}{\empty}
+    \cventry{Jun 2019}{Beyond the tipping point in dry conifer forests of the US Southwest: Post-fire Gambel oak shrubfields as alternative stable states}{Guiterman, C., E. Margolis, T. Assal, and C. Allen}{The North American Forest Ecology Workshop, Flagstaff, AZ}{}{\begin{itemize}%
+\item Invited special session%
+\end{itemize}}
+    \cventry{Apr 2019}{A Case Study for Using Digital Field Data Collection}{Brice, R., P. Brewer, C. Guiterman}{American Association of Geographers, Washington, D.C.}{}{\empty}
+    \cventry{Apr 2019}{No evidence of fire exclusion in the fire-scar record for the Red Hills Region of the US Southeast}{Rother, M., J. Huffman, K. Robertson, C. Guiterman}{American Association of Geographers, Washington, D.C.}{}{\empty}
+    \cventry{Aug 2018}{The fingerprint of transhumance and climate on fire regimes of the Navajo Nation}{Guiterman, C.H., E.Q. Margolis, D.A. Falk, and T.W. Swetnam}{Ecological Society of America, New Orleans, LA}{}{\begin{itemize}%
+\item Invited special session%
+\end{itemize}}
+    \cventry{Jul 2018}{Disasters, natural variability, and resilience: How tree-ring data address today’s challenges in forest ecosystems}{Guiterman, C.H.}{Earth Science Information Partners (ESIP) Conference, Tucson, AZ}{}{\begin{itemize}%
+\item Plenary presentation%
+\end{itemize}}
+    \cventry{May 2018}{Persistent fire-induced vegetation state switches in southwestern ponderosa pine forests}{Guiterman, C.H.}{The Fire Continuum Conference, Missoula, MT}{}{\begin{itemize}%
+\item Invited special session%
+\end{itemize}}
+    \cventry{Apr 2018}{Persistent fire-induced vegetation state switches in southwestern ponderosa pine forests}{Guiterman, C.H.}{Society of American Foresters Southwest Section Meeting, Safford, AZ}{}{\empty}
+    \cventry{Nov 2017}{Variability in tree-growth response to climate across dry conifer forests of the Navajo Nation}{Guiterman, C.H., E.Q. Margolis, C.A. Woodhouse, A.P. Williams, D.A. Falk, and T.W. Swetnam}{Society of American Foresters, Albuquerque, NM}{}{\empty}
+    \cventry{Aug 2017}{Targeted sampling designs influence tree-ring climate sensitivity: Implications for forest vulnerability assessments}{Klesse, S., J. DeRose, C. O’Connor, D. Frank, C. Guiterman, J. Shaw, and M. Evans}{Ecological Society of America, Portland, OR}{}{\empty}
+    \cventry{Apr 2017}{The origins of Chaco timbers by tree-ring based sourcing}{Guiterman, C.H.}{Society of American Archaeologists, Vancouver, BC, Canada}{}{\begin{itemize}%
+\item Invited oral presentation%
+\end{itemize}}
+    \cventry{Dec 2016}{Persistence and fire regimes of oak shrubfields suggest increased dominance with climate change}{Guiterman, C.H., E.Q. Margolis, T.W. Swetnam, D.A. Falk, and C.D. Allen}{3rd Southwest Fire Ecology Conference, Tucson, AZ}{}{\begin{itemize}%
+\item Invited special session oral presentation%
+\end{itemize}}
+    \cventry{Dec 2016}{Navajo settlement, pastoralism, and the interruption of frequent fires in northeastern Arizona}{Guiterman, C.H., E.Q. Margolis, C.H. Baisan, D.A. Falk, R.H. Towner, and T.W. Swetnam}{3rd Southwest Fire Ecology Conference, Tucson, AZ}{}{\empty}
+    \cventry{Oct 2015}{Climate Sensitivity of Navajo Forests: Use-inspired research to guide tribal forest management}{Guiterman, C.H., A.C. Becenti, E.Q. Margolis, and T.W. Swetnam}{13th Biennial Conference of Science and Management on the Colorado Plateau and Southwest Region, Flagstaff, AZ}{}{\begin{itemize}%
+\item Invited special session; A.C. Becenti, Head Forester, Navajo Forestry Department%
+\end{itemize}}
+    \cventry{Apr 2015}{Tree-Ring Sourcing of Great House Timbers and the Plaza Tree of Pueblo Bonito, Chaco Canyon, New Mexico}{Guiterman, C.H., T.W. Swetnam, J.S. Dean, C.H. Baisan, and N.B. English}{Society of American Archaeology, San Francisco, CA}{}{\empty}
+
+\hypertarget{professional-society-memberships}{%
+\section{Professional Society
+Memberships}\label{professional-society-memberships}}
+
+~~~~~~~~~~* Tree-Ring Society\\
+\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}*
+Forest Stewards Guild\\
+\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}*
+Society of American Foresters\\
+\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}*
+Association for Fire Ecology\\
+\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}*
+Association of American Geographers\\
+\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}*
+Society of American Archaeology
+
+\vspace{12pt}
+
+\hypertarget{student-research-assistants-mentees}{%
+\section{Student Research Assistants \&
+Mentees}\label{student-research-assistants-mentees}}
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{1.0in}
+
+\textbf{Eze Ahanonu}, undergraduate, field and lab (2014-2016)
+
+\textbf{Royale Billy-Wilson}, undergraduate, field and lab (2015-2017)
+
+\textbf{Patrick Brewer}, undergraduate, field and lab (2015-2016)
+
+\textbf{Alec Gagliano}, undergraduate, field and lab (2016-2018)
+
+\textbf{Galen Gudenkauf}, undergraduate, field (2014)
+
+\textbf{Jordan Krcmaric}, post-graduate, field (2017)
+
+\textbf{Ben Olimpio}, undergraduate, lab (2016-2017)
+
+\textbf{Anna Penaloza}, undergraduate, lab (2013)
+
+\textbf{Gabryl Sam}, post-graduate, field (2019)
+
+\textbf{Melissa Schwan}, undergraduate and post-graduate, field and lab
+(2015-2018)
+
+\textbf{Eric Shreve}, undergraduate, lab (2012-2013)
+
+\textbf{Jaime Yazzie}, post-graduate, field (2019)
+
+\endgroup
+
+\vspace{12pt}
+
+
+\end{document}
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `template.tex'.

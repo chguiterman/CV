@@ -6,7 +6,7 @@ given-name-pattern: Christopher
 family-name-pattern: Guiterman
 headcolor: 00008B
 # position: "Research Scientist"
-address: "Laboratory of Tree-Ring Research, University of Arizona \\tabularnewline Permanent residence: Hanover, New Hampshire. \\tabularnewline"
+address: "Laboratory of Tree-Ring Research, University of Arizona \\tabularnewline Permanent residence: Hanover, New Hampshire \\tabularnewline"
 phone: +1 520-230-2341
 www: chris-guiterman.rbind.io
 email: chguiterman@arizona.edu
@@ -43,4 +43,5 @@ library(conflicted)
 library(scales)
 conflict_prefer("filter", "dplyr")
 conflict_prefer("here", "here")
+# Sys.setenv(TEXINPUTS=".:./assets/tex:")
 ```

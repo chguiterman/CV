@@ -23,18 +23,18 @@
 
 \vspace{12pt}
 
-## Papers in review
+<!-- ## Papers in review -->
 
-\begingroup
-\setlength{\parindent}{-0.5in}
-\setlength{\leftskip}{1.0in}
-\setlength{\parskip}{8pt}
+<!-- \begingroup -->
+<!-- \setlength{\parindent}{-0.5in} -->
+<!-- \setlength{\leftskip}{1.0in} -->
+<!-- \setlength{\parskip}{8pt} -->
 
-::: {#refs_inreview}
-:::
-\endgroup
+<!-- ::: {#refs_inreview} -->
+<!-- ::: -->
+<!-- \endgroup -->
 
-\vspace{12pt}
+<!-- \vspace{12pt} -->
 
 ## Papers in preparation
 

@@ -33,6 +33,7 @@ bibliography_reports: "data/Other_pubs.bib"
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+options(tinytex.verbose = TRUE)
 library(vitae)
 library(tidyverse)
 library(lubridate)

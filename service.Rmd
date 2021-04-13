@@ -4,7 +4,8 @@
 \begingroup
 \setlength{\leftskip}{0.5in}
 
-**Journal peer reviews:** *Dendrochronologia,
+**Journal peer reviews:** 
+*Dendrochronologia,
 Fire Ecology,
 Forest Ecology and Management,
 Forest Science,
@@ -12,6 +13,7 @@ Global Ecology and Biogeography,
 Geophysical Research Letters,
 International Journal of Wildland Fire,
 Journal of Archaeological Method and Theory,
+Journal of Archaeological Science,
 Journal of Biogeography,
 Journal of Contemporary Water Research and Education,
 Journal of Hydrology,
@@ -31,3 +33,6 @@ serv %>%
                    what = what,
                    where = where)
 ```
+
+
+\vspace{12pt}

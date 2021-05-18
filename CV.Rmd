@@ -5,7 +5,7 @@ surname: Guiterman
 given-name-pattern: Christopher
 family-name-pattern: Guiterman
 headcolor: 00008B
-# position: "Research Scientist"
+position: "Assistant Research Professor"
 address: "Laboratory of Tree-Ring Research, University of Arizona"
 # address: "Laboratory of Tree-Ring Research, University of Arizona \\tabularnewline Permanent residence: Hanover, New Hampshire \\tabularnewline"
 phone: +1 520-230-2341

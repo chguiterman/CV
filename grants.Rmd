@@ -19,7 +19,7 @@ Total research funding: `r dollar(sum(grants$amount, na.rm=TRUE) - 500)`
 
 ```{r submitted grants}
 sub_gr <- tribble(~ date, ~ title, ~ sponsor, ~ amount, ~ collab,
-                  "In review", "Synthesis of the new North American tree-ring fire-scar network: using past and present fire-climate relationships to improve projections of future wildfire", "USGS Powell Centeror Analysis and Synthesis", 155381, "Ellis Margolis, Sean Parks, and Rachel Loehman"
+                  
 )
 
 sub_gr %>% 

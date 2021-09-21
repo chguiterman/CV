@@ -19,7 +19,8 @@ presentations %>%
 
 ```{r}
 presentations %>%
-  filter(Tag %in% c("talk", "invited")) %>%
+  filter(Tag %in% c("talk", "invited"),
+         When >= today() - years(5)) %>%
   arrange(desc(When)) %>%
   detailed_entries(what = Title,
                    when = glue("{month(When, label = TRUE)} {year(When)}"),

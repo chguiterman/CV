@@ -5,10 +5,10 @@ rmd_files:
   - "work.Rmd"
   - "grants.Rmd"
   - "awards.Rmd"  
-  - "teaching.Rmd"  
   - "publication.Rmd"  
-  - "service.Rmd"
   - "presentations.Rmd"  
+  - "teaching.Rmd" 
+  - "service.Rmd"
   - "memberships.Rmd"
   - "lab_group.Rmd"
 

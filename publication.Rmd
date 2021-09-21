@@ -10,7 +10,7 @@
 :::
 \endgroup -->
 
-## Refereed Journal Papers
+## Papers in refereed journals
 
 \begingroup
 \setlength{\parindent}{-0.5in}
@@ -23,18 +23,18 @@
 
 \vspace{12pt}
 
-<!-- ## Papers in review -->
+## Papers submitted or in review
 
-<!-- \begingroup -->
-<!-- \setlength{\parindent}{-0.5in} -->
-<!-- \setlength{\leftskip}{1.0in} -->
-<!-- \setlength{\parskip}{8pt} -->
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{1.0in}
+\setlength{\parskip}{8pt}
 
-<!-- ::: {#refs_inreview} -->
-<!-- ::: -->
-<!-- \endgroup -->
+::: {#refs_inreview}
+:::
+\endgroup
 
-<!-- \vspace{12pt} -->
+\vspace{12pt}
 
 ## Papers in preparation
 
@@ -65,18 +65,20 @@
 ## Software
 ```{r}
 df <- tribble(~what, ~when, ~with, ~where, ~why,
-              "dfoliatR: detection and analysis of insect defoliation signals in tree rings", 2020, "CH Guiterman, AM Lynch, JN Axelson",
+              "dfoliatR: Detection and analysis of insect defoliation signals in tree rings", 2020, "CH Guiterman, AM Lynch, JN Axelson",
               "https://chguiterman.github.io/dfoliatR/", "Author, Creator, Maintainer",
               "burnr: Advanced fire history tools in R", 2016, 
               "SB Malevich, CH Guiterman, EQ Margolis",
               "https://cran.r-project.org/web/packages/burnr/index.html",
               "Author, Contributor",
+              "rIMPD: Tools to search and access tree-ring fire history data on the International Multiproxy Paleofire Database", 2021, "CH Guiterman, EQ Margolis, and M Crimmins", "https://github.com/chguiterman/rIMPD", "Author, Creator",
               "suRge: An extension of dfoliatR to accomodate insect-induced growth surges in trees", 2019, "developed for Amy Hessl (West Virginia University)", "https://github.com/chguiterman/suRge", "Author, Creator",
               "slideRun: An extension of burnr to assess avalanche damage patterns on trees", 2018, "developed for Erich Peitzsch and Greg Pederson (USGS Montana)",
               "https://github.com/chguiterman/slideRun", "Author, Creator",
               "burnr_demo: A module-based R project for educating burnr users", 2017, "CH Guiterman", "https://github.com/chguiterman/burnr_demo", "Author, Creator"
 )
 df %>% 
+  arrange(desc(when)) %>% 
   detailed_entries(what = what, 
                    when = when, 
                    with = with, 

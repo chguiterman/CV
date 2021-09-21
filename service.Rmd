@@ -5,10 +5,13 @@
 \setlength{\leftskip}{0.5in}
 
 **Journal peer reviews:** 
-*Dendrochronologia,
+*American Antiquity,
+Dendrochronologia,
 Fire Ecology,
+Forests,
 Forest Ecology and Management,
 Forest Science,
+Frontiers in Environmental Science,
 Global Ecology and Biogeography,
 Geophysical Research Letters,
 International Journal of Wildland Fire,

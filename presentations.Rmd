@@ -1,7 +1,24 @@
 
-# Presentations
+# **Presentations**
 
-## Invited seminars
+## **Workshops**
+
+```{r}
+wk <- tribble(~what, ~when, ~with, ~where,
+              "Exploring tree-ring fire history across North America", "Nov 2021", "Guiterman, C.H. and Margolis, E.Q.", "AFE Fire Congress, Online", 
+)
+
+wk %>% 
+  arrange(desc(when)) %>% 
+  detailed_entries(what = what, 
+                   when = when, 
+                   with = with, 
+                   where = where, 
+                   why = NULL)
+
+```
+
+## **Invited seminars**
 ```{r presentations}
  presentations <- read_csv(here("data", "presentations.csv")) %>%  
    mutate(When = mdy(When)) 
@@ -15,7 +32,7 @@ presentations %>%
                    .protect = TRUE)
 ```
 
-## Conference presentations  (last five years)
+## **Conference presentations**  (*last five years*)
 
 ```{r}
 presentations %>%

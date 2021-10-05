@@ -1,4 +1,4 @@
-# Student Research Assistants & Mentees
+# **Student Research Assistants & Mentees**
 
 \begingroup
 \setlength{\parindent}{-0.5in}

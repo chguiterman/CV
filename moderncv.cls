@@ -318,6 +318,11 @@
 \newcommand*{\researchidsocialsymbol}{}
 \newcommand*{\telegramsocialsymbol}{}
 \newcommand*{\googlescholarsocialsymbol}{}
+\newcommand*{\researcheridsocialsymbol}{}
+\newcommand*{\whatsappsocialsymbol}{}
+\newcommand*{\signalsocialsymbol}{}
+\newcommand*{\matrixsocialsymbol}{}
+\newcommand*{\bornsymbol}{}
 % other
 %------
 % fonts

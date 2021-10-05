@@ -1,4 +1,4 @@
-# Education
+# **Education**
 
 ```{r edu}
 edu.raw <- read_csv(here("data", "education.csv"))

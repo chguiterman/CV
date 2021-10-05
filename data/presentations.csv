@@ -1,13 +1,13 @@
 Tag,When,Title,Authors,Conference,Location,Why
 seminar,3/14/2013,Tree-ring research and chronology building in the Chuska Mountains of the Navajo Nation,,Navajo Forestry Department,"Ft Defiance, AZ",
-seminar,9/30/2013,Dendrochronological sourcing of timbers from the Great Houses of Chaco Canyon,,"Visitors Center, Chaco Culture National Historical Park",,
+seminar,9/30/2013,Dendrochronological sourcing of timbers from the Great Houses of Chaco Canyon,,Visitors Center,Chaco Culture National Historical Park,
 seminar,3/15/2014,The Beams of Chaco Culture: Unraveling an ancient environment in the Southwest,,Tucson Festival of Books,"Tucson, AZ",
 seminar,4/9/2014,"Dendrochronological sourcing of timbers from the Great Houses of Chaco Canyon, New Mexico",,Laboratory of Tree-Ring Research seminar series,"Tucson, AZ",
 seminar,10/8/2014,An integrated field data collection system for dendrochronology,,Laboratory of Tree-Ring Research seminar series,"Tucson, AZ",
 seminar,3/14/2015,Distant and shifting sources of Chaco timbers,,Tucson Festival of Books,"Tucson, AZ",
 talk,4/18/2015,"Tree-Ring Sourcing of Great House Timbers and the Plaza Tree of Pueblo Bonito, Chaco Canyon, New Mexico","Guiterman, C.H., T.W. Swetnam, J.S. Dean, C.H. Baisan, and N.B. English",Society of American Archaeology,"San Francisco, CA",
 talk,10/6/2015,Climate Sensitivity of Navajo Forests: Use-inspired research to guide tribal forest management,"Guiterman, C.H., A.C. Becenti, E.Q. Margolis, and T.W. Swetnam",13th Biennial Conference of Science and Management on the Colorado Plateau and Southwest Region,"Flagstaff, AZ","Invited special session; A.C. Becenti, Head Forester, Navajo Forestry Department"
-seminar,3/16/2016,Persistence and fire regimes of oak shrubfields suggest increasing dominance with climate change,,Southwest Fire Science Consortium Webinar,,
+seminar,3/16/2016,Persistence and fire regimes of oak shrubfields suggest increasing dominance with climate change,,Southwest Fire Science Consortium ,Webinar,
 seminar,5/4/2016,"Landscape-scale variability in forest response to climate, Navajo Nation, US Southwest",,William G. McGinnies Graduate Scholarship in Arid Land Studies annual lecture,"Tucson, AZ",
 poster,7/2/2016,An 11th century shift in timber procurement areas for the great houses of Chaco Canyon,"Guiterman, C.H., T.W. Swetnam, and J.S. Dean",American Quaternary Association (AMQUA),"Santa Fe, NM",
 poster,10/16/2016,"Paleoclimatic Indicators of Surface Water Resources in the Chuska Mountains, Navajo Nation","Brice, R., C. Guiterman, C. McClellen, and C. Woodhouse",Mountains Without Snow: What are the Consequences? Mountain Climate Conference,"Leavenworth, WA","C. McClellan, Navajo Water Management Branch"
@@ -16,8 +16,8 @@ talk,12/1/2016,"Navajo settlement, pastoralism, and the interruption of frequent
 poster,12/15/2016,Climate Controls on Tree Growth Across Species and Sites in Northeastern Arizona,"Schwan, M.R., C.H. Guiterman, and K.J. Anchukaitis","American Geophysical Union, Fall Meeting","San Francisco, CA","Poster presentation by MRS, an undergraduate honors student under my mentorship"
 seminar,3/9/2017,Ancient origins for construction timbers of the Chacoan world (850-1240 CE),,US Geological Survey seminar series,"Tucson, AZ",
 talk,4/2/2017,The origins of Chaco timbers by tree-ring based sourcing,"Guiterman, C.H.",Society of American Archaeologists,"Vancouver, BC, Canada",Invited oral presentation
-talk,8/11/2017,Targeted sampling designs influence tree-ring climate sensitivity: Implications for forest vulnerability assessments,"Klesse, S., J. DeRose, C. O’Connor, D. Frank, C. Guiterman, J. Shaw, and M. Evans",Ecological Society of America,"Portland, OR",
-seminar,11/11/2017,Timber procurement patterns of the Aztec great houses,,"Aztec Ruins National Monument, New Mexico",,
+talk,8/11/2017,Targeted sampling designs influence tree-ring climate sensitivity: Implications for forest vulnerability assessments,"Klesse, S., J. DeRose, C. O'Connor, D. Frank, C. Guiterman, J. Shaw, and M. Evans",Ecological Society of America,"Portland, OR",
+seminar,11/11/2017,Timber procurement patterns of the Aztec great houses,,Aztec Ruins National Monument,New Mexico,
 talk,11/15/2017,Variability in tree-growth response to climate across dry conifer forests of the Navajo Nation,"Guiterman, C.H., E.Q. Margolis, C.A. Woodhouse, A.P. Williams, D.A. Falk, and T.W. Swetnam",Society of American Foresters,"Albuquerque, NM",
 seminar,11/16/2017,On the vulnerabilities of Navajo forests to climate change,,Navajo Nation Department of Natural Resources Annual Summit,"Twin Arrows Casino, AZ",
 seminar,2/7/2018,"Shifting timber sources signal socioecological change at the descendant Chacoan cultural center, Aztec Ruins, New Mexico",,Laboratory of Tree-Ring Research seminar series,"Tucson, AZ",
@@ -37,9 +37,10 @@ seminar,4/12/2012,Three seasons of FIA adventures in the Pacific Northwest,,Sout
 talk,8/3/2020,"Modern area burned in a historical context in the Jemez Mountains, New Mexico","Margolis, E., C. Farris, C. D. Allen, L. Johnson, D. Falk, T. Swetnam, and C. Guiterman",ESA Virtual Meeting,Online,
 seminar,9/28/2020,dfoliatR empowers analyses of forest defoliator outbreak chronologies,"Guiterman, C., Lynch, A, and Axelson, J.",Laboratory of Tree-Ring Research seminar series,via Zoom,
 talk,12/1/2020,Fire and climate in the eastern Siberia over the past 500 years (1500-2010 CE),"Xu, G., Guiterman, C., Swetnam, T., Trouet, V., Anchukaitis, K., and Baisan, C.",AGU Fall Meeting,Online,
-talk,12/14/2021,The seasonal impact of climate on wildfire in the American Southwest (1600-1900),"Groeneveld, D., Morrill, C., Gross, W., Guiterman, C., and Margolis, E.",AGU Fall Meeting,"New Orleans, LA",Presentation by undergraduate intern at NOAA's National Centers for Environmental Information
+talk,12/14/2021,The seasonal impact of climate on wildfire in the American Southwest (1600-1900),"Groeneveld, D., Morrill, C., Gross, W., Guiterman, C., and Margolis, E.",AGU Fall Meeting,"New Orleans, LA",Daniel Groeneveld is an undergraduate intern at NOAA's National Centers for Environmental Information
 talk,8/4/2021,The North American tree-ring fire-scar network,"Margolis, E. and Guiterman, C.",ESA Virtual Meeting,Online,
 seminar,9/16/2021,Tracing the origins of Chacoan beams,,Crow Canyon Archaeological Center,Available on YouTube: https://www.youtube.com/watch?v=8CdqcYmrI6o&t=4048s,
 talk,12/1/2021,"Drivers, types, and management responses to vegetation type conversions in the US Southwest","Guiterman, C.H.,Gregg, R.M., Marshall, L.A.E., Beckmann, J.J., van Mantgem, P., Falk, D.A., and Keeley, J.E.",AFE Fire Congress,Online,
 talk,12/1/2021,The North American tree-ring fire-scar network,"Margolis, E., Guiterman, C. and 84 co-authors",AFE Fire Congress,Online,
 talk,12/1/2021,Mechanisms of forest resilience,"Falk, D.A., van Mantgem, P., Keeley, J.E., Guiterman, C.H., Gregg, R.M., Marshall, L.A.E., Tepley, A., and Young, D.",AFE Fire Congress,Online,
+talk,12/1/2021,Quantifying fire regime divergence at tree-ring fire history sites in dry forests of the American southwest,"McClure, E.J., Coop, J.D., Guiterman, C.H., Margolis, E.Q., and Parks, S.A.",AFE Fire Congress,Online,Emma McClure is a Masters student at Western Colorado University

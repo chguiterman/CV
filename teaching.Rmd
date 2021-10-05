@@ -1,6 +1,6 @@
 
-# Courses Taught
-## Lead or co-instructor
+# **Courses Taught**
+## **Lead or co-instructor**
 
 ```{r teaching}
 courses <- read.csv(here("data", "teaching.csv")) %>% 
@@ -16,7 +16,7 @@ courses %>%
     .protect = FALSE
   )
 ```
-## Teaching assistant
+## **Teaching assistant**
 ```{r}
 courses %>% 
   filter(tag == "TA") %>% 
@@ -27,3 +27,5 @@ courses %>%
     .protect = FALSE
   )
 ```
+
+\vspace{12pt}

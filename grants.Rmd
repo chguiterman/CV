@@ -1,5 +1,5 @@
 
-# Grants & Fellowships
+# **Grants & Fellowships**
 
 ```{r grants data}
 grants <- read_csv(here("data", "grants.csv")) %>% 

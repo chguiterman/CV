@@ -1,6 +1,6 @@
-\newpage
+<!-- \newpage -->
 
-# Professional Society Memberships
+# **Professional Society Memberships**
 
 |           * Tree-Ring Society
 |           * Forest Stewards Guild

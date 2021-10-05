@@ -11,6 +11,7 @@ rmd_files:
   - "service.Rmd"
   - "memberships.Rmd"
   - "lab_group.Rmd"
+  - "references.Rmd"
 
 
 book_filename: "Guiterman_CV"

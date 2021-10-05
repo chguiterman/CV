@@ -1,5 +1,5 @@
 
-# Service
+# **Service**
 
 \begingroup
 \setlength{\leftskip}{0.5in}
@@ -38,4 +38,4 @@ serv %>%
 ```
 
 
-\vspace{12pt}
+<!-- \vspace{12pt} -->

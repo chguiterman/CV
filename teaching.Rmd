@@ -1,5 +1,5 @@
 
-# **Courses Taught**
+# **Teaching**
 ## **Lead or co-instructor**
 
 ```{r teaching}

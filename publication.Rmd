@@ -74,10 +74,10 @@ df <- tribble(~what, ~when, ~with, ~where, ~why,
               "https://cran.r-project.org/web/packages/burnr/index.html",
               "Author, Contributor",
               "rIMPD: An R package and Shiny App to search and explore tree-ring fire history data on the WDS-Paleo International Multiproxy Paleofire Database", 2021, "CH Guiterman, EQ Margolis, and M Crimmins", "https://github.com/chguiterman/rIMPD", "Author, Creator",
-              "suRge: An extension of dfoliatR to accomodate insect-induced growth surges in trees", 2019, "developed for Amy Hessl (West Virginia University)", "https://github.com/chguiterman/suRge", "Author, Creator",
-              "slideRun: An extension of burnr to assess avalanche damage patterns on trees", 2018, "developed for Erich Peitzsch and Greg Pederson (USGS Montana)",
-              "https://github.com/chguiterman/slideRun", "Author, Creator",
-              "burnr_demo: A module-based R project for educating burnr users", 2017, "CH Guiterman", "https://github.com/chguiterman/burnr_demo", "Author, Creator"
+              # "suRge: An extension of dfoliatR to accomodate insect-induced growth surges in trees", 2019, "developed for Amy Hessl (West Virginia University)", "https://github.com/chguiterman/suRge", "Author, Creator",
+              # "slideRun: An extension of burnr to assess avalanche damage patterns on trees", 2018, "developed for Erich Peitzsch and Greg Pederson (USGS Montana)",
+              # "https://github.com/chguiterman/slideRun", "Author, Creator",
+              # "burnr_demo: A module-based R project for educating burnr users", 2017, "CH Guiterman", "https://github.com/chguiterman/burnr_demo", "Author, Creator"
 )
 df %>% 
   arrange(desc(when)) %>% 

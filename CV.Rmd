@@ -13,8 +13,8 @@ www: chris-guiterman.rbind.io
 email: chguiterman@arizona.edu
 twitter: ChrisGuiterman
 github: chguiterman
-aboutme: |
- Forest and fire ecology | Forest resilience and vulnerabilities to climate change | Human influences on forest systems | Applications in dendrochronology
+# aboutme: |
+#  Forest and fire ecology | Forest resilience and vulnerabilities to climate change | Human influences on forest systems | Applications in dendrochronology
 date: "`r format(Sys.time(), '%B %Y')`"
 csl: "csl/apa6-cv.csl"
 nocite: "@*"

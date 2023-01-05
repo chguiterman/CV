@@ -1,0 +1,4 @@
+
+NOTE: 
+
+2022-10-04: The references fail to compile under default settings. To generate the PDF file after seeing the \vadjust error, go to Guiterman_CV.tex and change \newenvironment{CSLReferences}[3] to \newenvironment{CSLReferences}[2]. Then compile PDF form the .tex file. see here https://github.com/openjournals/whedon/pull/114

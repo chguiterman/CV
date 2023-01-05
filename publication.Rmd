@@ -12,54 +12,58 @@
 :::
 \endgroup -->
 
-## **Papers in refereed journals**
+<!-- ## **Papers in refereed journals** -->
 
 \begingroup
 \setlength{\parindent}{-0.5in}
 \setlength{\leftskip}{1.0in}
-\setlength{\parskip}{8pt}
+\setlength{\parskip}{0pt}
 
-::: {#refs_journals}
-:::
+<!-- ::: {#refs_journals} -->
+<!-- ::: -->
+```{r pubs}
+bibliography_entries(here("data", "Journal_publications.bib")) 
+```
 \endgroup
 
 \vspace{12pt}
 
-## **Papers submitted or in review**
+<!-- ## **Papers submitted or in review** -->
 
-\begingroup
-\setlength{\parindent}{-0.5in}
-\setlength{\leftskip}{1.0in}
-\setlength{\parskip}{8pt}
+<!-- \begingroup -->
+<!-- \setlength{\parindent}{-0.5in} -->
+<!-- \setlength{\leftskip}{1.0in} -->
+<!-- \setlength{\parskip}{8pt} -->
 
-::: {#refs_inreview}
-:::
-\endgroup
+<!-- ::: {#refs_inreview} -->
+<!-- ::: -->
+<!-- \endgroup -->
 
-\vspace{12pt}
+<!-- \vspace{12pt} -->
 
-## **Papers in preparation**
+<!-- ## **Papers in preparation** -->
 
-\begingroup
-\setlength{\parindent}{-0.5in}
-\setlength{\leftskip}{1.0in}
-\setlength{\parskip}{8pt}
+<!-- \begingroup -->
+<!-- \setlength{\parindent}{-0.5in} -->
+<!-- \setlength{\leftskip}{1.0in} -->
+<!-- \setlength{\parskip}{8pt} -->
 
-::: {#refs_inprep}
-:::
-\endgroup
+<!-- ::: {#refs_inprep} -->
+<!-- ::: -->
+<!-- \endgroup -->
 
-\vspace{12pt}
+<!-- \vspace{12pt} -->
 
 ## **Other publications and reports**
 
 \begingroup
 \setlength{\parindent}{-0.5in}
 \setlength{\leftskip}{1.0in}
-\setlength{\parskip}{8pt}
+\setlength{\parskip}{0pt}
+```{r reports}
+bibliography_entries(here("data", "Other_pubs.bib")) 
+```
 
-::: {#refs_reports}
-:::
 \endgroup
 
 \vspace{12pt}

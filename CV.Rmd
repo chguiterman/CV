@@ -5,26 +5,30 @@ surname: Guiterman
 given-name-pattern: Christopher
 family-name-pattern: Guiterman
 headcolor: 00008B
-position: "Assistant Research Professor"
-address: "Laboratory of Tree-Ring Research, University of Arizona"
-# address: "Laboratory of Tree-Ring Research, University of Arizona \\tabularnewline Permanent residence: Hanover, New Hampshire \\tabularnewline"
-phone: +1 520-230-2341
-www: chris-guiterman.rbind.io
-email: chguiterman@arizona.edu
+# position: "Forests | Fire | Tree rings | R"
+# position: "Research Scientist"
+phone: +1 720-446-9462
+www: t.ly/Xzpz
+email: christopher.guiterman@noaa.gov
 twitter: ChrisGuiterman
 github: chguiterman
 # aboutme: |
 #  Forest and fire ecology | Forest resilience and vulnerabilities to climate change | Human influences on forest systems | Applications in dendrochronology
+aboutme: |
+  Cooperative Institute for Research in Environmental Sciences, University of Colorado at Boulder and the
+  Paleoclimate team at NOAA's National Centers for Environmental Information
+
 date: "`r format(Sys.time(), '%B %Y')`"
 csl: "csl/apa6-cv.csl"
 nocite: "@*"
 knit: bookdown::render_book
-bibliography_journals: "data/Journal_publications.bib"
-bibliography_inreview: "data/Journal_inReview.bib"
-bibliography_inprep: "data/Journal_inPrep.bib"
-bibliography_reports: "data/Other_pubs.bib"
+# bibliography_journals: "data/Journal_publications.bib"
+# bibliography_inreview: "data/Journal_inReview.bib"
+# bibliography_inprep: "data/Journal_inPrep.bib"
+# bibliography_reports: "data/Other_pubs.bib"
 
 ---
+
 
 ```{r eval=FALSE, include=FALSE}
 # Remember to spell check!!

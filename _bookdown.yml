@@ -1,4 +1,5 @@
-output_dir: "docs"
+# output_dir: ""
+output_dir: "../"
 rmd_files:
   - "CV.Rmd"
   - "education.Rmd"
@@ -10,8 +11,8 @@ rmd_files:
   - "teaching.Rmd" 
   - "service.Rmd"
   - "memberships.Rmd"
-  - "lab_group.Rmd"
-  - "references.Rmd"
+  # - "lab_group.Rmd"
+  # - "references.Rmd"
 
 
 book_filename: "Guiterman_CV"

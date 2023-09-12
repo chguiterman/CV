@@ -1,0 +1,108 @@
+---
+name: Chris
+surname: Guiterman
+# position: "Research Scientist II, CIRES, University of Colorado-Boulder"
+address: "CIRES, University of Colorado-Boulder"
+phone: +1 720-446-9462
+www: cires.colorado.edu/researcher/chris-guiterman
+# www: t.ly/Xzpz
+email: "christopher.guiterman@noaa.gov"
+date: "`r format(Sys.time(), '%B %Y')`"
+csl: "../../csl/apa7-cv.csl"
+aboutme: |
+ **Research interests**: Forest and fire ecology | Forest resilience and vulnerabilities to climate change | Human influences on forest systems | Applications in dendrochronology
+output: vitae::moderncv
+fontsize: 12pt
+# output: vitae::twentyseconds
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+options(tinytex.verbose = TRUE)
+library(vitae)
+library(tidyverse)
+library(lubridate)
+library(here)
+library(readxl)
+library(glue)
+library(conflicted)
+library(scales)
+conflict_prefer("filter", "dplyr")
+conflict_prefer("here", "here")
+```
+# **Professional preparation**
+
+```{r edu}
+edu.raw <- read_csv(here("data", "education.csv"))
+edu <-
+  edu.raw %>% 
+  mutate(chair = glue("Chair: {chair}"),
+         dissertation = glue("\\textbf{[dissertation]}", 
+                             .open = "[", .close = "]")
+         ) %>% 
+  gather(dissertation, chair, key = "whytype", value = "why")
+
+edu %>%
+  filter(whytype == "dissertation") %>%
+  brief_entries(when = end_date,
+                what = degree,
+                with = glue("{university}, {department}, {location}"),
+                .protect = FALSE)
+
+```
+
+# **Employment history**
+
+```{r jobs}
+jobs <- read_csv(here("data", "jobs.csv")) %>% 
+   filter(!is.na(start_date)) %>% 
+   mutate(Start = mdy(start_date),
+         End = mdy(end_date)) %>% 
+  mutate(When = case_when(
+    is.na(End) ~ glue("{year(Start)}--    ") %>% as.character(),
+    year(Start) == year(End) ~ year(End) %>% as.character(),
+    TRUE ~ glue("{year(Start)}--{year(End)}") %>% as.character()
+  )) %>% 
+  mutate(End = if_else(is.na(End), today() + years(2), End)) #if no end date specified, set it to two years from now for sorting purposes, i.e. so jobs I'm still doing show up at top
+
+jobs %>% 
+  select(-why) %>% 
+  arrange(desc(End)) %>% 
+  # filter(where != "Joseph, OR") %>% 
+  brief_entries(
+    what = what,
+    when = When,
+    with = glue("{with}, {where}"),
+    .protect = FALSE
+  )
+```
+
+
+# **Recent publications**
+
+<!-- ## Selected Publications
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+::: {#refs_selected}
+:::
+\endgroup -->
+
+<!-- ## **Papers in refereed journals** -->
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{1.0in}
+\setlength{\parskip}{0pt}
+
+<!-- ::: {#refs_journals} -->
+<!-- ::: -->
+```{r pubs}
+bibliography_entries(here("data", "Journal_publications.bib")) %>% 
+  rowid_to_column() %>%
+  filter(rowid %in% c(13, 17, 18, 21:26))
+  
+```
+\endgroup

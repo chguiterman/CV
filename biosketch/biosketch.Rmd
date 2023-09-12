@@ -1,0 +1,43 @@
+---
+graphics: yes
+name: Chris
+surname: Guiterman
+given-name-pattern: Christopher
+family-name-pattern: Guiterman
+headcolor: 00008B
+phone: +1 720-446-9462
+www: t.ly/Xzpz
+email: christopher.guiterman@noaa.gov
+twitter: ChrisGuiterman
+github: chguiterman
+aboutme: |
+  Cooperative Institute for Research in Environmental Sciences, University of Colorado at Boulder and the
+  Paleoclimate team at NOAA's National Centers for Environmental Information
+date: "`r format(Sys.time(), '%B %Y')`"
+knit: vitae::moderncv:
+  theme: classic
+  keep_tex: no
+---
+
+
+```{r eval=FALSE, include=FALSE}
+# Remember to spell check!!
+# data_files <- list.files(here::here("data"), pattern = ".csv", full.names = TRUE)
+# spelling::spell_check_files(c("CV.Rmd", data_files))
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+options(tinytex.verbose = TRUE)
+library(vitae)
+library(tidyverse)
+library(lubridate)
+library(here)
+library(readxl)
+library(glue)
+library(conflicted)
+library(scales)
+conflict_prefer("filter", "dplyr")
+conflict_prefer("here", "here")
+# Sys.setenv(TEXINPUTS=".:./assets/tex:")
+```

@@ -1,35 +1,8 @@
 
 # **Presentations**
-
-## **Workshops**
-
 ```{r}
-wk <- tribble(~what, ~when, ~with, ~where,
-              "Exploring tree-ring fire history across North America", "Nov 2021", "Guiterman, C.H. and Margolis, E.Q.", "AFE Fire Congress, Online", 
-)
-
-wk %>% 
-  arrange(desc(when)) %>% 
-  detailed_entries(what = what, 
-                   when = when, 
-                   with = with, 
-                   where = where, 
-                   why = NULL)
-
-```
-
-## **Invited seminars**
-```{r presentations}
- presentations <- read_csv(here("data", "presentations.csv")) %>%  
+ presentations <- read_csv(here("data", "presentations.csv"))  %>%  
    mutate(When = mdy(When)) 
-
-presentations %>% 
-  filter(Tag == "seminar") %>% 
-  arrange(desc(When)) %>% 
-  detailed_entries(what = Title,
-                   when = glue("{month(When, label = TRUE)} {year(When)}"),
-                   where = glue("{Conference}, {Location}"), 
-                   .protect = TRUE)
 ```
 
 ## **Conference presentations**  (*last five years*)
@@ -47,15 +20,44 @@ presentations %>%
                    .protect = FALSE)
 ```
 
-<!-- ## Conference posters (last five years) -->
-<!-- ``` {r} -->
-<!-- presentations %>% -->
-<!--   filter(Tag == "poster") %>% -->
-<!--   arrange(desc(When)) %>% -->
-<!--   detailed_entries(what = Title, -->
-<!--                    when = glue("{month(When, label = TRUE)} {year(When)}"), -->
-<!--                    with = Authors, -->
-<!--                    where = glue("{Conference}, {Location}"),  -->
-<!--                    why = Why,  -->
-<!--                    .protect = FALSE) -->
-<!-- ```                    -->
+## Conference posters (last five years)
+``` {r}
+presentations %>%
+  filter(Tag == "poster",
+         When >= today() - years(5)) %>%
+  arrange(desc(When)) %>%
+  detailed_entries(what = Title,
+                   when = glue("{month(When, label = TRUE)} {year(When)}"),
+                   with = Authors,
+                   where = glue("{Conference}, {Location}"),
+                   why = Why,
+                   .protect = FALSE)
+```
+
+## **Invited seminars**
+```{r presentations}
+presentations %>% 
+  filter(Tag == "seminar") %>% 
+  arrange(desc(When)) %>% 
+  detailed_entries(what = Title,
+                   when = glue("{month(When, label = TRUE)} {year(When)}"),
+                   where = glue("{Conference}, {Location}"), 
+                   .protect = TRUE)
+```
+## **Workshops**
+
+```{r}
+wk <- tribble(~what, ~when, ~with, ~where,
+              "Exploring tree-ring fire history across North America", "Nov 2021", "Guiterman, C.H. and Margolis, E.Q.", "AFE Fire Congress, Online", 
+)
+
+wk %>% 
+  arrange(desc(when)) %>% 
+  detailed_entries(what = what, 
+                   when = when, 
+                   with = with, 
+                   where = where, 
+                   why = NULL)
+
+```
+

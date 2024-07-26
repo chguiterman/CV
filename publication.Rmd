@@ -21,8 +21,16 @@
 
 <!-- ::: {#refs_journals} -->
 <!-- ::: -->
+```{r pubs data}
+pubs <- bibliography_entries(here("data", "Journal_publications.bib"))
+```
+
+*Publications (n = `r nrow(pubs)`)*
+
+\vspace{12pt}
+
 ```{r pubs}
-bibliography_entries(here("data", "Journal_publications.bib")) 
+bibliography_entries(here("data", "Journal_publications.bib"))
 ```
 \endgroup
 

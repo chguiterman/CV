@@ -8,17 +8,17 @@ headcolor: 00008B
 # position: "Forests | Fire | Tree rings | R"
 # position: "Research Scientist"
 phone: +1 720-446-9462
-www: t.ly/Xzpz
+# www: t.ly/Xzpz
 email: christopher.guiterman@noaa.gov
 # twitter: ChrisGuiterman
-github: chguiterman
+# github: chguiterman
 # aboutme: |
 #  Forest and fire ecology | Forest resilience and vulnerabilities to climate change | Human influences on forest systems | Applications in dendrochronology
 aboutme: |
   Cooperative Institute for Research in Environmental Sciences, University of Colorado at Boulder \newline World Data Service for Paleoclimatology, NOAA's National Centers for Environmental Information \newline `r format(Sys.time(), '%B %Y')`
 
-date: "`r format(Sys.time(), '%B %Y')`"
-csl: "csl/apa6-cv.csl"
+# date: "`r format(Sys.time(), '%B %Y')`"
+csl: "csl/apa7-cv.csl"
 nocite: "@*"
 knit: bookdown::render_book
 # bibliography_journals: "data/Journal_publications.bib"

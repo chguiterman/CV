@@ -2,15 +2,13 @@
 
 # **Publications**
 
-<!-- ## Selected Publications
-
 \begingroup
 \setlength{\parindent}{-0.5in}
 \setlength{\leftskip}{0.5in}
 
-::: {#refs_selected}
-:::
-\endgroup -->
+<!-- ::: {#refs_selected} -->
+<!-- ::: -->
+\endgroup
 
 <!-- ## **Papers in refereed journals** -->
 
@@ -19,15 +17,26 @@
 \setlength{\leftskip}{1.0in}
 \setlength{\parskip}{0pt}
 
+*Submitted*
+
+\vspace{6pt}
+
+```{r pub_review}
+bibliography_entries(here("data", "Journal_inReview.bib"))
+```
+
 <!-- ::: {#refs_journals} -->
 <!-- ::: -->
 ```{r pubs data}
 pubs <- bibliography_entries(here("data", "Journal_publications.bib"))
 ```
 
-*Publications (n = `r nrow(pubs)`)*
+\vspace{6pt}
 
-\vspace{12pt}
+*Published*
+<!-- *Published (n = `r nrow(pubs)`)* -->
+
+\vspace{6pt}
 
 ```{r pubs}
 bibliography_entries(here("data", "Journal_publications.bib"))

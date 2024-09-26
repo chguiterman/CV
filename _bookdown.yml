@@ -4,10 +4,11 @@ rmd_files:
   - "CV.Rmd"
   - "education.Rmd"
   - "work.Rmd"
+  - "teaching.Rmd"
   - "publication.Rmd" 
   - "grants.Rmd"
   - "presentations.Rmd"  
-  # - "teaching.Rmd" 
+
   # - "awards.Rmd"  
   # - "service.Rmd"
   # - "memberships.Rmd"

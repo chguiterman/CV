@@ -12,6 +12,13 @@ edu <-
 
 edu %>%
   filter(whytype == "dissertation") %>%
+  bind_rows(data.frame(end_date = 2014, 
+                       degree = "Certificate in College Teaching", 
+                       university = "University of Arizona",
+                       department = "University Center for Assessment, Teaching, and Technology",
+                       location = "Tucson, AZ",
+                       whytype = "",
+                       why = "")) %>%
   brief_entries(when = end_date,
                 what = degree,
                 with = glue("{university}, {department}, {location}"),
